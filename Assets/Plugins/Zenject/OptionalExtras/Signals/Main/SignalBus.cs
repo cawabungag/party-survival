@@ -170,7 +170,7 @@ namespace Zenject
             return GetDeclaration(signalType, identifier, true).Stream;
         }
 
-        public IObservable<object> GetStream(Type signalType)
+        public IObservable<object> GetStream(Type signalType, object identifier)
         {
             return GetStreamId(signalType, null);
         }
