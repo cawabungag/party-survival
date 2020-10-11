@@ -8,18 +8,51 @@
 //------------------------------------------------------------------------------
 public static class GameComponentsLookup {
 
-    public const int EcsGameDirection = 0;
-    public const int EcsGamePosition = 1;
+    public const int EcsCommonComponentsDestroyed = 0;
+    public const int EcsCommonComponentsLink = 1;
+    public const int EcsCommonComponentsName = 2;
+    public const int EcsCommonComponentsOwner = 3;
+    public const int EcsCommonComponentsUid = 4;
+    public const int EcsGameDirection = 5;
+    public const int EcsGameFlagsDestroyed = 6;
+    public const int EcsGameFlagsInstantiated = 7;
+    public const int EcsGameFlagsLoaded = 8;
+    public const int EcsGameFlagsUnit = 9;
+    public const int EcsGamePosition = 10;
+    public const int EcsCommonComponentsNameListener = 11;
+    public const int GameEcsCommonComponentsDestroyedListener = 12;
 
-    public const int TotalComponents = 2;
+    public const int TotalComponents = 13;
 
     public static readonly string[] componentNames = {
+        "EcsCommonComponentsDestroyed",
+        "EcsCommonComponentsLink",
+        "EcsCommonComponentsName",
+        "EcsCommonComponentsOwner",
+        "EcsCommonComponentsUid",
         "EcsGameDirection",
-        "EcsGamePosition"
+        "EcsGameFlagsDestroyed",
+        "EcsGameFlagsInstantiated",
+        "EcsGameFlagsLoaded",
+        "EcsGameFlagsUnit",
+        "EcsGamePosition",
+        "EcsCommonComponentsNameListener",
+        "GameEcsCommonComponentsDestroyedListener"
     };
 
     public static readonly System.Type[] componentTypes = {
+        typeof(Ecs.Common.Components.DestroyedComponent),
+        typeof(Ecs.Common.Components.LinkComponent),
+        typeof(Ecs.Common.Components.NameComponent),
+        typeof(Ecs.Common.Components.OwnerComponent),
+        typeof(Ecs.Common.Components.UidComponent),
         typeof(Ecs.Game.DirectionComponent),
-        typeof(Ecs.Game.PositionComponent)
+        typeof(Ecs.Game.Flags.DestroyedComponent),
+        typeof(Ecs.Game.Flags.InstantiatedComponent),
+        typeof(Ecs.Game.Flags.LoadedComponent),
+        typeof(Ecs.Game.Flags.UnitComponent),
+        typeof(Ecs.Game.PositionComponent),
+        typeof(EcsCommonComponentsNameListenerComponent),
+        typeof(GameEcsCommonComponentsDestroyedListenerComponent)
     };
 }
