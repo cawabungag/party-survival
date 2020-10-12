@@ -574,6 +574,7 @@ PlayerSettings:
   webGLThreadsSupport: 0
   webGLWasmStreaming: 0
   scriptingDefineSymbols:
+    1: ZEN_SIGNALS_ADD_UNIRX
     7: ZEN_SIGNALS_ADD_UNIRX
   platformArchitecture: {}
   scriptingBackend: {}
