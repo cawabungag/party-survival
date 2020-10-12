@@ -8,15 +8,21 @@
 //------------------------------------------------------------------------------
 public static class InputComponentsLookup {
 
+    public const int EcsInputDirectional = 0;
+    public const int EcsInputHorizontal = 1;
+    public const int EcsInputVertical = 2;
 
-
-    public const int TotalComponents = 0;
+    public const int TotalComponents = 3;
 
     public static readonly string[] componentNames = {
-
+        "EcsInputDirectional",
+        "EcsInputHorizontal",
+        "EcsInputVertical"
     };
 
     public static readonly System.Type[] componentTypes = {
-
+        typeof(Ecs.Input.DirectionalComponent),
+        typeof(Ecs.Input.HorizontalComponent),
+        typeof(Ecs.Input.VerticalComponent)
     };
 }

@@ -1,5 +1,23 @@
 {
   "dependencies": {
+    "com.littlebigfun.addressable-importer": {
+      "version": "0.9.2",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.addressables": "1.1.5"
+      },
+      "url": "https://package.openupm.com"
+    },
+    "com.unity.addressables": {
+      "version": "1.1.5",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.scriptablebuildpipeline": "1.5.1"
+      },
+      "url": "https://packages.unity.com"
+    },
     "com.unity.collab-proxy": {
       "version": "1.2.16",
       "depth": 0,
@@ -26,6 +44,13 @@
     "com.unity.ide.vscode": {
       "version": "1.2.1",
       "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.scriptablebuildpipeline": {
+      "version": "1.5.1",
+      "depth": 2,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
@@ -64,6 +89,20 @@
       "dependencies": {
         "com.unity.modules.ui": "1.0.0"
       }
+    },
+    "jillejr.newtonsoft.json-for-unity": {
+      "version": "12.0.301",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://package.openupm.com"
+    },
+    "jillejr.newtonsoft.json-for-unity.converters": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://package.openupm.com"
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",
