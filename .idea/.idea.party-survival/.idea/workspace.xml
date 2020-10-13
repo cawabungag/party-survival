@@ -8,18 +8,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DB/Weapons/Characteristics/IWeaponCharacteristicsDatbase.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DB/Weapons/Prefabs/Impls/WeaponPrefabDatabase.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DB/Weapons/Characteristics/Impls/WeaponCharacteristicsDatabase.cs" root0="FORCE_HIGHLIGHTING" />
+
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DB/Units/Prefabs/Impls/UnitPrefabDatabase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DB/Units/Characteristics/IUnitCharacteristicDatabase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DB/Units/Characteristics/Impls/UnitCharacteristicVo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DB/Units/Characteristics/Impls/UnitCharacteristicDatabase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DB/Units/Prefabs/IUnitPrefabDatabase.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DB/Weapons/Characteristics/Impls/WeaponCharacteristicsVo.cs" root0="FORCE_HIGHLIGHTING" />
+
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DB/Units/Prefabs/Impls/UnitPrefabVo.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DB/Weapons/Prefabs/Impls/WeaponPrefabVo.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DB/Weapons/Prefabs/IWeaponPrefabDatabase.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -72,7 +68,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602486402997</updated>
-      <workItem from="1602486408520" duration="10959000" />
+
+      <workItem from="1602486408520" duration="11582000" />
     </task>
     <servers />
   </component>
