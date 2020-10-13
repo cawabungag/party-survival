@@ -928,7 +928,7 @@
               <e p="Characteristics" t="Include">
                 <e p="Impls" t="Include">
                   <e p="WeaponCharacteristicsDatabase.cs" t="Include" />
-                  <e p="WeaponCharacteristicsVO.cs" t="Include" />
+                  <e p="WeaponCharacteristicsVo.cs" t="Include" />
                 </e>
                 <e p="IWeaponCharacteristicsDatbase.cs" t="Include" />
               </e>
@@ -1040,6 +1040,11 @@
                 <e p="UnitComponent.cs" t="Include" />
               </e>
               <e p="PositionComponent.cs" t="Include" />
+              <e p="Weapons" t="Include">
+                <e p="DamageComponent.cs" t="Include" />
+                <e p="FiringFrequencyComponent.cs" t="Include" />
+                <e p="ShellsComponent.cs" t="Include" />
+              </e>
             </e>
             <e p="Input" t="Include">
               <e p="DirectionalComponent.cs" t="Include" />
@@ -1134,6 +1139,7 @@
             <e p="Feature.cs" t="Include" />
             <e p="Game" t="Include">
               <e p="Components" t="Include">
+                <e p="GameDamageComponent.cs" t="Include" />
                 <e p="GameEcsCommonComponentsDestroyedComponent.cs" t="Include" />
                 <e p="GameEcsCommonComponentsLinkComponent.cs" t="Include" />
                 <e p="GameEcsCommonComponentsNameComponent.cs" t="Include" />

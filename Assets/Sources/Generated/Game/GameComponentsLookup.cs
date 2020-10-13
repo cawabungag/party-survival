@@ -6,25 +6,30 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+
+using Ecs.Game.Weapons;
+
 public static class GameComponentsLookup {
 
-    public const int EcsCommonComponentsDestroyed = 0;
-    public const int EcsCommonComponentsLink = 1;
-    public const int EcsCommonComponentsName = 2;
-    public const int EcsCommonComponentsOwner = 3;
-    public const int EcsCommonComponentsUid = 4;
-    public const int EcsGameDirection = 5;
-    public const int EcsGameFlagsDestroyed = 6;
-    public const int EcsGameFlagsInstantiated = 7;
-    public const int EcsGameFlagsLoaded = 8;
-    public const int EcsGameFlagsUnit = 9;
-    public const int EcsGamePosition = 10;
-    public const int EcsCommonComponentsNameListener = 11;
-    public const int GameEcsCommonComponentsDestroyedListener = 12;
+    public const int Damage = 0;
+    public const int EcsCommonComponentsDestroyed = 1;
+    public const int EcsCommonComponentsLink = 2;
+    public const int EcsCommonComponentsName = 3;
+    public const int EcsCommonComponentsOwner = 4;
+    public const int EcsCommonComponentsUid = 5;
+    public const int EcsGameDirection = 6;
+    public const int EcsGameFlagsDestroyed = 7;
+    public const int EcsGameFlagsInstantiated = 8;
+    public const int EcsGameFlagsLoaded = 9;
+    public const int EcsGameFlagsUnit = 10;
+    public const int EcsGamePosition = 11;
+    public const int EcsCommonComponentsNameListener = 12;
+    public const int GameEcsCommonComponentsDestroyedListener = 13;
 
-    public const int TotalComponents = 13;
+    public const int TotalComponents = 14;
 
     public static readonly string[] componentNames = {
+        "Damage",
         "EcsCommonComponentsDestroyed",
         "EcsCommonComponentsLink",
         "EcsCommonComponentsName",
@@ -41,6 +46,7 @@ public static class GameComponentsLookup {
     };
 
     public static readonly System.Type[] componentTypes = {
+        typeof(DamageComponent),
         typeof(Ecs.Common.Components.DestroyedComponent),
         typeof(Ecs.Common.Components.LinkComponent),
         typeof(Ecs.Common.Components.NameComponent),
