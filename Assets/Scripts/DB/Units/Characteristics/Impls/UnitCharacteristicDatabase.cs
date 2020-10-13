@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 
 namespace DB.Units.Characteristics.Impls
-{
+{ 
 	public class UnitCharacteristicDatabase : ScriptableObject, IUnitCharacteristicDatabase
 	{
 		[SerializeField] private UnitCharacteristicVo[] _unitCharacteristicVos;
