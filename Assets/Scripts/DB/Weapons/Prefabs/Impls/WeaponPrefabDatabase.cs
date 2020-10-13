@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using DB.Units.Prefabs.Impls;
 using UnityEngine;
@@ -18,6 +19,7 @@ public class WeaponPrefabDatabase : ScriptableObject, IWeaponPrefavDatabase
             }
         }
         
-        throw new System.NotImplementedException();
+        throw new ArgumentException(
+            $"[{nameof(WeaponPrefabDatabase)}] No WeaponPrefabCVo for WeaponPrefabId:{weaponId}");
     }
 }

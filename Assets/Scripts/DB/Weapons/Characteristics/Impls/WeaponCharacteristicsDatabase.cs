@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 
 public class WeaponCharacteristicsDatabase : ScriptableObject, IWeaponCharacteristicsDatbase
@@ -17,7 +18,8 @@ public class WeaponCharacteristicsDatabase : ScriptableObject, IWeaponCharacteri
             }
         }
         
-        throw new System.NotImplementedException();
+        throw new ArgumentException(
+            $"[{nameof(WeaponCharacteristicsDatabase)}] No WeaponCharacteristicVo for WeaponId:{weaponId}");
     }
 }
 
