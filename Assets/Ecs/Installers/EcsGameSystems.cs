@@ -1,3 +1,4 @@
+using Ecs.Item.Systems;
 using Zenject;
 
 //------------------------------------------------------------------------------
@@ -11,7 +12,14 @@ using Zenject;
 namespace Entitas.Generated.Installer {
 	public static class EcsGameSystems {
 		public static void Install(DiContainer container, bool isDebug = true){
+			Normal(container, isDebug);
 		}
+
+		private static void Normal(DiContainer container, bool isDebug) {
+ 
+			//  1000
+			container.BindInterfacesAndSelfTo<RemoveItemSystem>().AsSingle();	// 1000 
+		 }
 
 	}
 }

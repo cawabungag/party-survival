@@ -8,26 +8,44 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-
+    <setting file="file://$PROJECT_DIR$/Assets/Ecs/Installers/EcsGameSystems.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DB/Units/Prefabs/Impls/UnitPrefabDatabase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DB/Units/Characteristics/IUnitCharacteristicDatabase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DB/Weapons/Prefabs/Impls/WeaponPrefabVo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DB/Weapons/Prefabs/IWeaponPrefabDatabase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DB/Units/Characteristics/Impls/UnitCharacteristicVo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ecs/Game/DirectionComponnet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DB/Units/Characteristics/Impls/UnitCharacteristicDatabase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DB/Weapons/Prefabs/Impls/WeaponPrefabDatabase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DB/Weapons/Characteristics/IWeaponCharacteristicsDatbase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ecs/Game/Weapons/DamageComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DB/Weapons/Characteristics/Impls/WeaponCharacteristicsDatabase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ecs/Game/PositionComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DB/Weapons/Characteristics/Impls/WeaponCharacteristicsVo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ecs/Game/Weapons/ShellsComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ecs/Item/ItemExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ecs/Common/Components/DestroyedComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DB/Units/Prefabs/IUnitPrefabDatabase.cs" root0="FORCE_HIGHLIGHTING" />
-
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ecs/Item/Systems/RemoveItemSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ecs/Game/Weapons/FiringFrequencyComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DB/Units/Prefabs/Impls/UnitPrefabVo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ecs/Item/Components/AmountComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ecs/Item/Components/ItemTypeComponent.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/DB/Weapons/Characteristics/Impls/WeaponCharacteristicsVO.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DB/Units/Characteristics/Impls/UnitCharacteristicDatabase.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/DB/Weapons/Characteristics/Impls/WeaponCharacteristicsDatabase.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/DB/Weapons/Characteristics/Impls/WeaponCharacteristicsVo.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DB/Weapons/Characteristics/IWeaponCharacteristicsDatbase.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DB/Weapons/Prefabs/Impls/WeaponPrefabVo.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DB/Weapons/Prefabs/IWeaponPrefabDatabase.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DB/Weapons/Prefabs/Impls/WeaponPrefabDatabase.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DB/Weapons/Characteristics/Impls/WeaponCharacteristicsDatabase.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DB/Weapons/Characteristics/Impls/WeaponCharacteristicsVo.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ecs/Game/Weapons/DamageComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ecs/Game/Weapons/ShellsComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ecs/Game/Weapons/FiringFrequencyComponent.cs" />
       </list>
     </option>
   </component>
@@ -68,18 +86,21 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602486402997</updated>
-
       <workItem from="1602486408520" duration="11582000" />
+      <workItem from="1602572273711" duration="126000" />
+      <workItem from="1602572424698" duration="1141000" />
+      <workItem from="1602573594369" duration="714000" />
+      <workItem from="1602574369074" duration="2367000" />
     </task>
     <servers />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="WindowStateProjectService">
-    <state x="849" y="243" key="RiderGenerateDialog" timestamp="1602493830998">
+    <state x="849" y="243" key="RiderGenerateDialog" timestamp="1602572624227">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="849" y="243" key="RiderGenerateDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602493830998" />
+    <state x="849" y="243" key="RiderGenerateDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602572624227" />
     <state x="461" y="162" key="SettingsEditor" timestamp="1602491449458">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
