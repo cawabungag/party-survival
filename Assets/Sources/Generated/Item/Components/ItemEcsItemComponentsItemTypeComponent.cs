@@ -6,19 +6,22 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+
+using Services.Items;
+
 public partial class ItemEntity {
 
     public Ecs.Item.Components.ItemTypeComponent ecsItemComponentsItemType { get { return (Ecs.Item.Components.ItemTypeComponent)GetComponent(ItemComponentsLookup.EcsItemComponentsItemType); } }
     public bool hasEcsItemComponentsItemType { get { return HasComponent(ItemComponentsLookup.EcsItemComponentsItemType); } }
 
-    public void AddEcsItemComponentsItemType(Game.Services.Items.EItemType newValue) {
+    public void AddEcsItemComponentsItemType(EItemType newValue) {
         var index = ItemComponentsLookup.EcsItemComponentsItemType;
         var component = CreateComponent<Ecs.Item.Components.ItemTypeComponent>(index);
         component.Value = newValue;
         AddComponent(index, component);
     }
 
-    public void ReplaceEcsItemComponentsItemType(Game.Services.Items.EItemType newValue) {
+    public void ReplaceEcsItemComponentsItemType(EItemType newValue) {
         var index = ItemComponentsLookup.EcsItemComponentsItemType;
         var component = CreateComponent<Ecs.Item.Components.ItemTypeComponent>(index);
         component.Value = newValue;

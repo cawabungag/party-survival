@@ -1,7 +1,7 @@
 ﻿﻿using Ecs.Core;
-using Game.Services.Items;
+ using Services.Items;
 
-namespace Ecs.Item
+ namespace Ecs.Item
 {
 	public static class ItemExtensions
 	{

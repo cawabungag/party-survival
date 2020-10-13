@@ -1,4 +1,4 @@
-﻿namespace Game.Services.Items
+﻿namespace Services.Items
 {
 	public enum EItemType
 	{

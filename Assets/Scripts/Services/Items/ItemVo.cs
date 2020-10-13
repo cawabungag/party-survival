@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Game.Services.Items
+namespace Services.Items
 {
 	[Serializable]
 	public struct ItemVo
