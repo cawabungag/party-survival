@@ -1,3 +1,4 @@
+using Services.Items.Impls;
 using SimpleUi;
 using UI.Game.Windows;
 using UnityEngine;
@@ -11,18 +12,24 @@ namespace Installers
 
 		public override void InstallBindings()
 		{
-			InstallWindows();
-			InstallCamera();
+			BindWindows();
+			BindCamera();
+			BindServices();
 		}
 
-		private void InstallCamera()
+		private void BindCamera()
 		{
 			Container.BindInterfacesTo<Camera>().FromInstance(_camera);
 		}
 
-		private void InstallWindows()
+		private void BindWindows()
 		{
 			Container.BindWindow<InputWindow>();
+		}
+
+		private void BindServices()
+		{
+			Container.BindInterfacesTo<ItemService>().AsSingle();
 		}
 	}
 }

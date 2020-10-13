@@ -1,6 +1,6 @@
 ﻿using System;
 using Ecs.Core;
-using Game.Services.Items;
+using Services.Items;
 
 namespace Ecs.Access.States.Impls
 {

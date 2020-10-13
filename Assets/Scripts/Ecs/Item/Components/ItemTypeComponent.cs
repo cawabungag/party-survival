@@ -1,6 +1,6 @@
 ﻿using Ecs.Access;
 using Entitas;
-using Game.Services.Items;
+using Services.Items;
 
 namespace Ecs.Item.Components
 {

@@ -1,7 +1,7 @@
-﻿﻿using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Ecs.Core;
 
-namespace Game.Services.Items
+namespace Services.Items
 {
 	public interface IItemService
 	{
