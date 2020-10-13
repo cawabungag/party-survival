@@ -1,6 +1,9 @@
-﻿using UnityEngine;
+﻿using DB.Weapons.Prefabs.Impls;
 
-public interface IWeaponPrefavDatabase
+namespace DB.Weapons.Prefabs
 {
-    WeaponPrefabVo GetWeaponPrefabVoPrefab(string weaponId);
+    public interface IWeaponPrefavDatabase
+    {
+        WeaponPrefabVo GetWeaponPrefabVoPrefab(string weaponId);
+    }
 }

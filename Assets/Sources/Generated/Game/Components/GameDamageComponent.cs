@@ -6,6 +6,9 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+
+using Ecs.Game.Weapons;
+
 public partial class GameEntity {
 
     public DamageComponent damage { get { return (DamageComponent)GetComponent(GameComponentsLookup.Damage); } }

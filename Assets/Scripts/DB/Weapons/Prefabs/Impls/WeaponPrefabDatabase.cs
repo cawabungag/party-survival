@@ -1,25 +1,25 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using DB.Units.Prefabs.Impls;
 using UnityEngine;
 
-public class WeaponPrefabDatabase : ScriptableObject, IWeaponPrefavDatabase
+namespace DB.Weapons.Prefabs.Impls
 {
-    [SerializeField] private WeaponPrefabVo[] _weaponPrefabVos; 
-    
-    public WeaponPrefabVo GetWeaponPrefabVoPrefab(string weaponId)
+    public class WeaponPrefabDatabase : ScriptableObject, IWeaponPrefavDatabase
     {
-        for (int i = 0; i < _weaponPrefabVos.Length; i++)
+        [SerializeField] private WeaponPrefabVo[] _weaponPrefabVos; 
+    
+        public WeaponPrefabVo GetWeaponPrefabVoPrefab(string weaponId)
         {
-            WeaponPrefabVo weaponPrefabVo = _weaponPrefabVos[i];
-            if (weaponPrefabVo.WeaponId == weaponId)
+            for (int i = 0; i < _weaponPrefabVos.Length; i++)
             {
-                return weaponPrefabVo;
+                WeaponPrefabVo weaponPrefabVo = _weaponPrefabVos[i];
+                if (weaponPrefabVo.WeaponId == weaponId)
+                {
+                    return weaponPrefabVo;
+                }
             }
-        }
         
-        throw new ArgumentException(
-            $"[{nameof(WeaponPrefabDatabase)}] No WeaponPrefabCVo for WeaponPrefabId:{weaponId}");
+            throw new ArgumentException(
+                $"[{nameof(WeaponPrefabDatabase)}] No WeaponPrefabCVo for WeaponPrefabId:{weaponId}");
+        }
     }
 }

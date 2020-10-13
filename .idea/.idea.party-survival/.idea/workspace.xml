@@ -9,16 +9,27 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DB/Weapons/Prefabs/Impls/WeaponPrefabVo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DB/Weapons/Prefabs/IWeaponPrefabDatabase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ecs/Game/Weapons/ShellsComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DB/Units/Characteristics/Impls/UnitCharacteristicDatabase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DB/Weapons/Prefabs/Impls/WeaponPrefabDatabase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DB/Weapons/Characteristics/IWeaponCharacteristicsDatbase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ecs/Game/Weapons/FiringFrequencyComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ecs/Game/Weapons/DamageComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DB/Weapons/Characteristics/Impls/WeaponCharacteristicsDatabase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DB/Weapons/Characteristics/Impls/WeaponCharacteristicsVo.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/DB/Weapons/Prefabs/Impls/WeaponPrefabDatabase.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DB/Weapons/Characteristics/Impls/WeaponCharacteristicsDatabase.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DB/Weapons/Prefabs/Impls/WeaponPrefabDatabase.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DB/Weapons/Characteristics/Impls/WeaponCharacteristicsVo.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DB/Weapons/Characteristics/IWeaponCharacteristicsDatbase.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DB/Weapons/Prefabs/Impls/WeaponPrefabVo.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DB/Weapons/Prefabs/IWeaponPrefabDatabase.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ecs/Game/Weapons/DamageComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ecs/Game/Weapons/FiringFrequencyComponent.cs" />
       </list>
     </option>
   </component>
@@ -58,7 +69,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602585588066</updated>
-      <workItem from="1602585592195" duration="529000" />
+      <workItem from="1602585592195" duration="1322000" />
     </task>
     <servers />
   </component>

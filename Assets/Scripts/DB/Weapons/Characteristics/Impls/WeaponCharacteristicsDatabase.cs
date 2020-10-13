@@ -1,4 +1,6 @@
 ﻿using System;
+using DB.Weapons.Characteristics;
+using DB.Weapons.Characteristics.Impls;
 using UnityEngine;
 
 

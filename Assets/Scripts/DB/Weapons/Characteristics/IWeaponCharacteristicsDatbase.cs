@@ -1,8 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using DB.Weapons.Characteristics.Impls;
 
-public interface IWeaponCharacteristicsDatbase
-{ 
-    WeaponCharacteristicsVo GetWeaponCharacteristicsVO(string weaponId);
+namespace DB.Weapons.Characteristics
+{
+    public interface IWeaponCharacteristicsDatbase
+    { 
+        WeaponCharacteristicsVo GetWeaponCharacteristicsVO(string weaponId);
+    }
 }

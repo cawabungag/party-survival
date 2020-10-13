@@ -1,12 +1,15 @@
 ﻿using Entitas;
 
-[Game]
-public class FiringFrequencyComponent : IComponent
+namespace Ecs.Game.Weapons
 {
-    public float Value;
-
-    public override string ToString()
+    [Game]
+    public class FiringFrequencyComponent : IComponent
     {
-        return Value.ToString();
+        public float Value;
+
+        public override string ToString()
+        {
+            return Value.ToString();
+        }
     }
 }

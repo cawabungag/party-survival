@@ -6,6 +6,9 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+
+using Ecs.Game.Weapons;
+
 public static class GameComponentsLookup {
 
     public const int Damage = 0;
