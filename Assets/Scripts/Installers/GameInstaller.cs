@@ -24,6 +24,7 @@ namespace Installers
 
 		private void BindWindows()
 		{
+			Container.BindInterfacesTo<GameWindowManager>().AsSingle().NonLazy();
 			Container.BindWindow<InputWindow>();
 		}
 

@@ -9,15 +9,15 @@ namespace UI.Game.Input.Impls
 	public class InputController : UiController<InputView>, IInitializable,
 		IDisposable
 	{
-		private readonly InputContext _inputContext;
+		private readonly GameContext _gameContext;
 		private CompositeDisposable _disposable = new CompositeDisposable();
 		private ReactiveProperty<float> _onHorizontal;
 		private ReactiveProperty<float> _onVertical;
 		private ReactiveProperty<Vector2> _onDirection;
 
-		public InputController(InputContext inputContext)
+		public InputController(GameContext gameContext)
 		{
-			_inputContext = inputContext;
+			_gameContext = gameContext;
 		}
 
 		public void Initialize()
@@ -33,23 +33,23 @@ namespace UI.Game.Input.Impls
 
 		private void OnHorizontal(float value)
 		{
-			_inputContext.ReplaceEcsInputHorizontal(value);
+			_gameContext.ReplaceEcsGameInputHorizontal(value);
 		}
 
 		private void OnVertical(float value)
 		{
-			_inputContext.ReplaceEcsInputVertical(value);
+			_gameContext.ReplaceEcsGameInputVertical(value);
 		}
 
 		private void OnDirection(Vector2 value)
 		{
-			_inputContext.ReplaceEcsInputDirectional(value);
+			_gameContext.ReplaceEcsGameInputDirectional(value);
 		}
 
 
 		public void Dispose()
 		{
-			throw new NotImplementedException();
+			_disposable.Dispose();
 		}
 	}
 }

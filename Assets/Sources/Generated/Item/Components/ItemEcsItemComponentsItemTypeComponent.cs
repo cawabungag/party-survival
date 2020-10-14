@@ -6,22 +6,19 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
-using Services.Items;
-
 public partial class ItemEntity {
 
     public Ecs.Item.Components.ItemTypeComponent ecsItemComponentsItemType { get { return (Ecs.Item.Components.ItemTypeComponent)GetComponent(ItemComponentsLookup.EcsItemComponentsItemType); } }
     public bool hasEcsItemComponentsItemType { get { return HasComponent(ItemComponentsLookup.EcsItemComponentsItemType); } }
 
-    public void AddEcsItemComponentsItemType(EItemType newValue) {
+    public void AddEcsItemComponentsItemType(Services.Items.EItemType newValue) {
         var index = ItemComponentsLookup.EcsItemComponentsItemType;
         var component = CreateComponent<Ecs.Item.Components.ItemTypeComponent>(index);
         component.Value = newValue;
         AddComponent(index, component);
     }
 
-    public void ReplaceEcsItemComponentsItemType(EItemType newValue) {
+    public void ReplaceEcsItemComponentsItemType(Services.Items.EItemType newValue) {
         var index = ItemComponentsLookup.EcsItemComponentsItemType;
         var component = CreateComponent<Ecs.Item.Components.ItemTypeComponent>(index);
         component.Value = newValue;
