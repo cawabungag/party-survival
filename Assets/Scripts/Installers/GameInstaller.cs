@@ -1,5 +1,4 @@
 using Services.Items.Impls;
-using SimpleUi;
 using UI.Game.Windows;
 using UnityEngine;
 using Zenject;
@@ -24,8 +23,10 @@ namespace Installers
 
 		private void BindWindows()
 		{
+			
 			Container.BindInterfacesTo<GameWindowManager>().AsSingle().NonLazy();
-			Container.BindWindow<InputWindow>();
+			Container.BindInterfacesAndSelfTo<InputWindow>().AsSingle();
+
 		}
 
 		private void BindServices()

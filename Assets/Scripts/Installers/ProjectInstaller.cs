@@ -1,16 +1,20 @@
 using SimpleUi;
 using SimpleUi.Signals;
+using UnityEngine;
 using Zenject;
 
 namespace Installers
 {
 	public class ProjectInstaller : MonoInstaller
 	{
+		[SerializeField] private EWindowLayer windowLayer;
+
 		public override void InstallBindings()
 		{
-			Container.BindUiSignals(EWindowLayer.Project);
-			Container.BindWindowsController<WindowsController>(EWindowLayer.Project);
 			SignalBusInstaller.Install(Container);
+			Container.BindUiSignals(windowLayer);
+			Container.BindWindowsController<WindowsController>(EWindowLayer.Local);
+			
 		}
 	}
 }

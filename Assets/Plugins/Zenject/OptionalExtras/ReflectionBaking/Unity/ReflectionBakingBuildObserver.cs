@@ -5,7 +5,6 @@ using System.Linq;
 using ModestTree;
 using UnityEditor;
 using UnityEditor.Compilation;
-using UnityEngine;
 using Zenject.ReflectionBaking.Mono.Cecil;
 using Debug = UnityEngine.Debug;
 
@@ -21,7 +20,7 @@ namespace Zenject.ReflectionBaking
 
         static void OnAssemblyCompiled(string assemblyAssetPath, CompilerMessage[] messages)
         {
-#if !UNITY_2018
+#if !UNITY_2018_1_OR_NEWER
             if (Application.isEditor && !BuildPipeline.isBuildingPlayer)
             {
                 return;

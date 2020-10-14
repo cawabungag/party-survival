@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
-using UniRx.InternalUtil;
 using UniRx.Operators;
 
 namespace UniRx
