@@ -6,59 +6,101 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
-using Ecs.Game.Weapons;
-
 public static class GameComponentsLookup {
 
-    public const int Damage = 0;
-    public const int EcsCommonComponentsDestroyed = 1;
-    public const int EcsCommonComponentsLink = 2;
-    public const int EcsCommonComponentsName = 3;
-    public const int EcsCommonComponentsOwner = 4;
-    public const int EcsCommonComponentsUid = 5;
+    public const int EcsCommonComponentsDestroyed = 0;
+    public const int EcsCommonComponentsLink = 1;
+    public const int EcsCommonComponentsName = 2;
+    public const int EcsCommonComponentsOwner = 3;
+    public const int EcsCommonComponentsUid = 4;
+    public const int EcsGameDesiredDirectional = 5;
     public const int EcsGameDirection = 6;
     public const int EcsGameFlagsDestroyed = 7;
     public const int EcsGameFlagsInstantiated = 8;
     public const int EcsGameFlagsLoaded = 9;
     public const int EcsGameFlagsUnit = 10;
-    public const int EcsGamePosition = 11;
-    public const int EcsCommonComponentsNameListener = 12;
-    public const int GameEcsCommonComponentsDestroyedListener = 13;
+    public const int EcsGameInputDirectional = 11;
+    public const int EcsGameInputHorizontal = 12;
+    public const int EcsGameInputVertical = 13;
+    public const int EcsGameObjectType = 14;
+    public const int EcsGamePosition = 15;
+    public const int EcsGameUnitsHealth = 16;
+    public const int EcsGameUnitsMaxHealth = 17;
+    public const int EcsGameUnitsRangeView = 18;
+    public const int EcsGameUnitsSpeed = 19;
+    public const int EcsGameVelocity = 20;
+    public const int EcsGameWeaponsDamage = 21;
+    public const int EcsGameWeaponsFiringFrequency = 22;
+    public const int EcsCommonComponentsNameListener = 23;
+    public const int EcsGameObjectTypeListener = 24;
+    public const int EcsGamePositionListener = 25;
+    public const int EcsGameVelocityListener = 26;
+    public const int GameEcsCommonComponentsDestroyedListener = 27;
+    public const int Shells = 28;
 
-    public const int TotalComponents = 14;
+    public const int TotalComponents = 29;
 
     public static readonly string[] componentNames = {
-        "Damage",
         "EcsCommonComponentsDestroyed",
         "EcsCommonComponentsLink",
         "EcsCommonComponentsName",
         "EcsCommonComponentsOwner",
         "EcsCommonComponentsUid",
+        "EcsGameDesiredDirectional",
         "EcsGameDirection",
         "EcsGameFlagsDestroyed",
         "EcsGameFlagsInstantiated",
         "EcsGameFlagsLoaded",
         "EcsGameFlagsUnit",
+        "EcsGameInputDirectional",
+        "EcsGameInputHorizontal",
+        "EcsGameInputVertical",
+        "EcsGameObjectType",
         "EcsGamePosition",
+        "EcsGameUnitsHealth",
+        "EcsGameUnitsMaxHealth",
+        "EcsGameUnitsRangeView",
+        "EcsGameUnitsSpeed",
+        "EcsGameVelocity",
+        "EcsGameWeaponsDamage",
+        "EcsGameWeaponsFiringFrequency",
         "EcsCommonComponentsNameListener",
-        "GameEcsCommonComponentsDestroyedListener"
+        "EcsGameObjectTypeListener",
+        "EcsGamePositionListener",
+        "EcsGameVelocityListener",
+        "GameEcsCommonComponentsDestroyedListener",
+        "Shells"
     };
 
     public static readonly System.Type[] componentTypes = {
-        typeof(DamageComponent),
         typeof(Ecs.Common.Components.DestroyedComponent),
         typeof(Ecs.Common.Components.LinkComponent),
         typeof(Ecs.Common.Components.NameComponent),
         typeof(Ecs.Common.Components.OwnerComponent),
         typeof(Ecs.Common.Components.UidComponent),
+        typeof(Ecs.Game.DesiredDirectionalComponent),
         typeof(Ecs.Game.DirectionComponent),
         typeof(Ecs.Game.Flags.DestroyedComponent),
         typeof(Ecs.Game.Flags.InstantiatedComponent),
         typeof(Ecs.Game.Flags.LoadedComponent),
         typeof(Ecs.Game.Flags.UnitComponent),
+        typeof(Ecs.Game.Input.DirectionalComponent),
+        typeof(Ecs.Game.Input.HorizontalComponent),
+        typeof(Ecs.Game.Input.VerticalComponent),
+        typeof(Ecs.Game.ObjectTypeComponent),
         typeof(Ecs.Game.PositionComponent),
+        typeof(Ecs.Game.Units.HealthComponent),
+        typeof(Ecs.Game.Units.MaxHealthComponent),
+        typeof(Ecs.Game.Units.RangeViewComponent),
+        typeof(Ecs.Game.Units.SpeedComponent),
+        typeof(Ecs.Game.VelocityComponent),
+        typeof(Ecs.Game.Weapons.DamageComponent),
+        typeof(Ecs.Game.Weapons.FiringFrequencyComponent),
         typeof(EcsCommonComponentsNameListenerComponent),
-        typeof(GameEcsCommonComponentsDestroyedListenerComponent)
+        typeof(EcsGameObjectTypeListenerComponent),
+        typeof(EcsGamePositionListenerComponent),
+        typeof(EcsGameVelocityListenerComponent),
+        typeof(GameEcsCommonComponentsDestroyedListenerComponent),
+        typeof(ShellsComponent)
     };
 }

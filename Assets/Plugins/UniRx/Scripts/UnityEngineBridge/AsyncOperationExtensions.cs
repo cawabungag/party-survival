@@ -2,7 +2,6 @@
 using System.Collections;
 using System.Threading;
 using UnityEngine;
-
 #if !UniRxLibrary
 using ObservableUnity = UniRx.Observable;
 #endif

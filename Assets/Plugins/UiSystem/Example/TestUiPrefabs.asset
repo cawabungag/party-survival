@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27eaf26fdcbd4c11937be435369d0997, type: 3}
+  m_Name: TestUiPrefabs
+  m_EditorClassIdentifier: 
+  _canvas: {fileID: 223451422329615030, guid: 0240eb59cf1946747bfbab23c36d0f2d, type: 2}
+  _firstView: {fileID: 114557081718805766, guid: a23d86386f000a84a88a1411cfd0b21f,
+    type: 2}
+  _secondView: {fileID: 114361630700097736, guid: 8cec7041c29f9cb4cbb3971d429addeb,
+    type: 2}
+  _thirdView: {fileID: 114625237554451590, guid: ca62476873cb92d47a00db5997801b46,
+    type: 2}
+  _fourthView: {fileID: 114963678272803370, guid: 0171717b54157854db593d7cdcdf6caf,
+    type: 2}
+  _fifthView: {fileID: 114641495707497852, guid: 3156f5e66bcc5744781a5b3c3975066e,
+    type: 2}
+  _firstPopUpView: {fileID: 114638959654515056, guid: 5eecf945782822e448e94ae5c9cb9847,
+    type: 2}
+  _secondPopUpView: {fileID: 114867443413040014, guid: 2ffa066b1a062c54fb6399c8c8e76dfb,
+    type: 2}

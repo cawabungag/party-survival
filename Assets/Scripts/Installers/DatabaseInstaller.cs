@@ -7,6 +7,7 @@ using Zenject;
 
 namespace Installers
 {
+	[CreateAssetMenu(menuName = "Installers/DatabaseInstaller", fileName = "DatabaseInstaller")]
 	public class DatabaseInstaller : ScriptableObjectInstaller
 	{
 		[SerializeField] private UnitCharacteristicDatabase _unitCharacteristicDatabase;

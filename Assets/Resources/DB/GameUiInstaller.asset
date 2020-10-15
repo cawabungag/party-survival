@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d8dec6a3e614cfea5d1d42c1bac3a61, type: 3}
+  m_Name: GameUiInstaller
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 1497078389681034883, guid: dde07e803beb9488e881a6b896d6a9ad, type: 3}
+  inputView: {fileID: 4966903849259904677, guid: c34f76da2c52a4ce1b6c8bfc173e059d,
+    type: 3}

@@ -4,6 +4,6 @@ namespace DB.Units.Prefabs
 {
 	public interface IUnitPrefabDatabase
 	{
-		UnitPrefabVo GetUnitPrefab(string unitId);
+		UnitPrefabVo GetUnitPrefab(EObjectType unitId);
 	}
 }

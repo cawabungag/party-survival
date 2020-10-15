@@ -4,6 +4,6 @@ namespace DB.Units.Characteristics
 {
 	public interface IUnitCharacteristicDatabase
 	{
-		UnitCharacteristicVo GetCharacteristics(string unitId);
+		UnitCharacteristicVo GetCharacteristics(EObjectType unitId);
 	}
 }

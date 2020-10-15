@@ -1,5 +1,7 @@
+using Ecs.Core.Impls;
 using Services.Items.Impls;
-using SimpleUi;
+using Services.Unit.Impls;
+using Services.Unit.Impls.Strategies;
 using UI.Game.Windows;
 using UnityEngine;
 using Zenject;
@@ -15,6 +17,8 @@ namespace Installers
 			BindWindows();
 			BindCamera();
 			BindServices();
+			BindStrategies();
+			BindFactories();
 		}
 
 		private void BindCamera()
@@ -24,12 +28,23 @@ namespace Installers
 
 		private void BindWindows()
 		{
-			Container.BindWindow<InputWindow>();
+			Container.BindInterfacesTo<GameWindowManager>().AsSingle().NonLazy();
+			Container.BindInterfacesAndSelfTo<InputWindow>().AsSingle();
 		}
 
 		private void BindServices()
 		{
 			Container.BindInterfacesTo<ItemService>().AsSingle();
+		}
+
+		private void BindStrategies()
+		{
+			Container.BindInterfacesTo<InstantiateUnitStrategy>().AsSingle();
+		}
+
+		private void BindFactories()
+		{
+			Container.BindInterfacesTo<UnitFactory>().AsSingle();
 		}
 	}
 }
