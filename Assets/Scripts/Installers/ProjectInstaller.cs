@@ -14,7 +14,6 @@ namespace Installers
 			SignalBusInstaller.Install(Container);
 			Container.BindUiSignals(windowLayer);
 			Container.BindWindowsController<WindowsController>(EWindowLayer.Local);
-			
 		}
 	}
 }

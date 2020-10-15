@@ -3,11 +3,12 @@ using UnityEngine;
 
 namespace DB.Units.Prefabs.Impls
 {
+	[CreateAssetMenu(menuName = "Installers/UnitPrefabDatabase", fileName = "UnitPrefabDatabasex")]
 	public class UnitPrefabDatabase : ScriptableObject, IUnitPrefabDatabase
 	{
 		[SerializeField] private UnitPrefabVo[] _unitPrefabVos;
 
-		public UnitPrefabVo GetUnitPrefab(string unitId)
+		public UnitPrefabVo GetUnitPrefab(EObjectType unitId)
 		{
 			for (int i = 0; i < _unitPrefabVos.Length; i++)
 			{

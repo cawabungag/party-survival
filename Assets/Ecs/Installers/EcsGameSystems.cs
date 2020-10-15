@@ -1,4 +1,5 @@
 using Ecs.Item.Systems;
+using Ecs.Game.System;
 using Zenject;
 
 //------------------------------------------------------------------------------
@@ -17,6 +18,15 @@ namespace Entitas.Generated.Installer {
 
 		private static void Normal(DiContainer container, bool isDebug) {
  
+			//  0100
+			container.BindInterfacesAndSelfTo<InstantiateSystem>().AsSingle();	// 0100 
+
+			//  0300
+			container.BindInterfacesAndSelfTo<ApplyVelocityUnitSystem>().AsSingle();	// 0300 
+
+			//  0700
+			container.BindInterfacesAndSelfTo<MoveUnitSystem>().AsSingle();	// 0700 
+
 			//  1000
 			container.BindInterfacesAndSelfTo<RemoveItemSystem>().AsSingle();	// 1000 
 		 }
