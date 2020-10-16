@@ -2,8 +2,6 @@
 using Entitas;
 using InstallerGenerator.Attributes;
 using InstallerGenerator.Enums;
-using NotImplementedException = System.NotImplementedException;
-
 
 namespace Ecs.Game.System
 {
@@ -31,7 +29,7 @@ namespace Ecs.Game.System
                     entity.Destroy();
                 }
             }
-            throw new NotImplementedException(); 
+            
         }
     }
 }
