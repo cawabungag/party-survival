@@ -24,6 +24,9 @@ namespace Entitas.Generated.Installer {
 			//  0300
 			container.BindInterfacesAndSelfTo<ApplyVelocityUnitSystem>().AsSingle();	// 0300 
 
+			//  0500
+			container.BindInterfacesAndSelfTo<LowHealthSystem>().AsSingle();	// 0500 
+
 			//  0700
 			container.BindInterfacesAndSelfTo<MoveUnitSystem>().AsSingle();	// 0700 
 
