@@ -1,13 +1,15 @@
 ﻿using System;
+using DB.Units;
 using UnityEngine;
 
 namespace DB.Weapons.Prefabs.Impls
 {
-    public class WeaponPrefabDatabase : ScriptableObject, IWeaponPrefavDatabase
+    [CreateAssetMenu(menuName = "Installers/WeaponPrefabDatabase", fileName = "WeaponPrefabDatabasex")]
+    public class WeaponPrefabDatabase : ScriptableObject, IWeaponPrefabDatabase
     {
         [SerializeField] private WeaponPrefabVo[] _weaponPrefabVos; 
     
-        public WeaponPrefabVo GetWeaponPrefabVoPrefab(string weaponId)
+        public WeaponPrefabVo GetWeaponPrefabVoPrefab(EObjectType weaponId)
         {
             for (int i = 0; i < _weaponPrefabVos.Length; i++)
             {
@@ -21,5 +23,6 @@ namespace DB.Weapons.Prefabs.Impls
             throw new ArgumentException(
                 $"[{nameof(WeaponPrefabDatabase)}] No WeaponPrefabCVo for WeaponPrefabId:{weaponId}");
         }
+        
     }
 }

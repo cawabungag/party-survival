@@ -1,9 +1,10 @@
-﻿using DB.Weapons.Prefabs.Impls;
+﻿using DB.Units;
+using DB.Weapons.Prefabs.Impls;
 
 namespace DB.Weapons.Prefabs
 {
-    public interface IWeaponPrefavDatabase
+    public interface IWeaponPrefabDatabase
     {
-        WeaponPrefabVo GetWeaponPrefabVoPrefab(string weaponId);
+        WeaponPrefabVo GetWeaponPrefabVoPrefab(EObjectType weaponId);
     }
 }

@@ -1,9 +1,10 @@
-﻿using DB.Weapons.Characteristics.Impls;
+﻿using DB.Units;
+using DB.Weapons.Characteristics.Impls;
 
 namespace DB.Weapons.Characteristics
 {
-    public interface IWeaponCharacteristicsDatbase
+    public interface IWeaponCharacteristicsDatabase
     { 
-        WeaponCharacteristicsVo GetWeaponCharacteristicsVO(string weaponId);
+        WeaponCharacteristicsVo GetWeaponCharacteristicsVO(EObjectType weaponId);
     }
 }

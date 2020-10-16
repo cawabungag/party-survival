@@ -1,27 +1,29 @@
 ﻿using System;
-using DB.Weapons.Characteristics;
-using DB.Weapons.Characteristics.Impls;
+using DB.Units;
 using UnityEngine;
 
-
-public class WeaponCharacteristicsDatabase : ScriptableObject, IWeaponCharacteristicsDatbase
+namespace DB.Weapons.Characteristics.Impls
 {
-    [SerializeField] private WeaponCharacteristicsVo[] _weaponCharacteristicVos;
-
-    public WeaponCharacteristicsVo GetWeaponCharacteristicsVO(string weaponId)
+    public class WeaponCharacteristicsDatabase : ScriptableObject, IWeaponCharacteristicsDatabase
     {
-        for (int i = 0; i < _weaponCharacteristicVos.Length; i++)
-        {
-            WeaponCharacteristicsVo weaponCharacteristicsVo = _weaponCharacteristicVos[i];
+        [SerializeField] private WeaponCharacteristicsVo[] _weaponCharacteristicVos;
 
-            if (weaponCharacteristicsVo.WeaponId == weaponId)
+        public WeaponCharacteristicsVo GetWeaponCharacteristicsVO(EObjectType weaponId)
+        {
+            for (int i = 0; i < _weaponCharacteristicVos.Length; i++)
             {
-                return weaponCharacteristicsVo;
+                WeaponCharacteristicsVo weaponCharacteristicsVo = _weaponCharacteristicVos[i];
+
+                if (weaponCharacteristicsVo.WeaponId == weaponId)
+                {
+                    return weaponCharacteristicsVo;
+                }
             }
-        }
         
-        throw new ArgumentException(
-            $"[{nameof(WeaponCharacteristicsDatabase)}] No WeaponCharacteristicVo for WeaponId:{weaponId}");
+            throw new ArgumentException($"[{nameof(WeaponCharacteristicsDatabase)}] No WeaponCharacteristicVo for WeaponId:{weaponId}");
+        }
+
+   
     }
 }
 

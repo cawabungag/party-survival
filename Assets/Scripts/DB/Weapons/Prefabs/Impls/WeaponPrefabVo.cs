@@ -1,15 +1,16 @@
 ﻿using System;
+using DB.Units;
 using UnityEngine;
 
 namespace DB.Weapons.Prefabs.Impls
 {
    [Serializable]
-   public class WeaponPrefabVo : MonoBehaviour
+   public class WeaponPrefabVo
    {
-      [SerializeField] private string _weaponId;
+      public EObjectType _weaponId;
       [SerializeField] private GameObject _prefab;
 
-      public string WeaponId => _weaponId;
+      public EObjectType WeaponId => _weaponId;
       public GameObject Prefab => _prefab;
    }
 }
