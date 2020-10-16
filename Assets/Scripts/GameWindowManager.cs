@@ -5,7 +5,7 @@ using UI.Game.Windows;
 using UnityEngine;
 using Zenject;
 
-public class GameWindowManager : IInitializable
+public abstract class GameWindowManager : IInitializable
 {
 	private readonly SignalBus _signalBus;
 	private readonly GameContext m_gameContext;
