@@ -1,9 +1,9 @@
 ﻿using System;
 
-namespace DB.Units.ZombieUnit.Characteristics.Impls
+namespace DB.Units.EnemyUnit.Characteristics.Impls
 {
     [Serializable]
-    public class ZombieUnitCharacteristicVo
+    public class EnemyCharacteristicVo
     {
         public EObjectType _unitId;
         public float _health;
