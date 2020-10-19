@@ -3,6 +3,7 @@ namespace DB.Units
 	public enum EObjectType
 	{
 		Unit, 
-		Weapon
+		Weapon,
+		ZombieUnit
 	}
 }
