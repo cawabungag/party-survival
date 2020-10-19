@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace DB.Units.Prefabs.Impls
 {
-	[CreateAssetMenu(menuName = "Installers/UnitPrefabDatabase", fileName = "UnitPrefabDatabasex")]
+	[CreateAssetMenu(menuName = "Installers/UnitPrefabDatabase", fileName = "UnitPrefabDatabase")]
 	public class UnitPrefabDatabase : ScriptableObject, IUnitPrefabDatabase
 	{
 		[SerializeField] private UnitPrefabVo[] _unitPrefabVos;
