@@ -13,10 +13,11 @@ namespace Services.Unit.Impls.Strategies
         private readonly IEnemyPrefabDatabase _enemyDatabase;
 
         protected AInstantiateEnemyStrategy(
-
+            DiContainer diContainer,
             IEnemyPrefabDatabase enemyDatabase
         )
         {
+            _diContainer = diContainer;
             _enemyDatabase = enemyDatabase;
         }
 

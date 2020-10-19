@@ -12,15 +12,17 @@ using Zenject;
 
 public class InstantiateEnemyStrategy : AInstantiateEnemyStrategy 
 {
+        private readonly DiContainer _diContainer;
         private readonly IEnemyCharacteristicsDatabase _enemyCharacteristicDatabase;
         private readonly IEnemyPrefabDatabase _enemyPrefabDatabase;
 
 
         public InstantiateEnemyStrategy(
             
+            DiContainer diContainer,
             IEnemyCharacteristicsDatabase enemyCharacteristicDatabase,
             IEnemyPrefabDatabase enemyPrefabDatabase
-        ) : base(enemyPrefabDatabase)
+        ) : base(diContainer, enemyPrefabDatabase)
         {
             _enemyCharacteristicDatabase = enemyCharacteristicDatabase;
         }
