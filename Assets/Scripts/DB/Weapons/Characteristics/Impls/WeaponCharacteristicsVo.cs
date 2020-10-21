@@ -1,6 +1,5 @@
 ﻿using System;
 using DB.Units;
-using UnityEngine;
 
 namespace DB.Weapons.Characteristics.Impls
 {
