@@ -21,7 +21,7 @@ namespace Ecs.Game.System
 
 		protected override void Execute(List<GameEntity> entities)
 		{
-			foreach (var entity in entities)
+			foreach (GameEntity entity in entities)
 			{
 				if (entity.ecsGameUnitsHealth.Value <= 0)
 				{
