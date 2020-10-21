@@ -30,6 +30,12 @@ namespace Entitas.Generated.Installer {
 			//  0700
 			container.BindInterfacesAndSelfTo<MoveUnitSystem>().AsSingle();	// 0700 
 
+			//  0750
+			container.BindInterfacesAndSelfTo<InstantiateWeaponSystem>().AsSingle();	// 0750 
+
+			//  0800
+			container.BindInterfacesAndSelfTo<FindUnitSystem>().AsSingle();	// 0800 
+
 			//  1000
 			container.BindInterfacesAndSelfTo<RemoveItemSystem>().AsSingle();	// 1000 
 		 }
