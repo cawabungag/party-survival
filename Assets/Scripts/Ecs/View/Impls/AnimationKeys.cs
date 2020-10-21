@@ -13,9 +13,9 @@ namespace Ecs.View.Impls
 		{
 			switch (movementType)
 			{
-				case EMovementType.Stay:
-					return IdleAnimation;
 				case EMovementType.Idle:
+					return IdleAnimation;
+				case EMovementType.Walk:
 					return WalkAnimation;
 				case EMovementType.Run:
 					return RunAnimation;

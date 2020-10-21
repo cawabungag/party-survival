@@ -6,7 +6,6 @@ namespace Ecs.View.Impls.Game
 	public class UnitObjectView : GameObjectView, IEcsGameMovementTypeListener, IEcsGameVelocityListener
 	{
 		[SerializeField] private Animator _animator;
-		[SerializeField] private Rigidbody _rigidbody;
 
 		protected override void Listen(GameEntity entity)
 		{

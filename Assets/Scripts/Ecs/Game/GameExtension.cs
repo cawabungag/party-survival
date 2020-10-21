@@ -1,4 +1,5 @@
 using DB.Units;
+using DB.Units.MovementType;
 using Ecs.Core;
 using UnityEngine;
 
@@ -13,6 +14,7 @@ namespace Ecs.Game
 			entity.AddEcsGameObjectType(unitType);
 			entity.AddEcsGamePosition(position);
 			entity.AddEcsGameDesiredDirectional(Vector2.zero);
+			entity.AddEcsGameMovementType(EMovementType.Walk);
 			entity.isEcsGameFlagsInstantiated = true;
 			entity.isEcsGameFlagsUnit = true;
 			return entity;
