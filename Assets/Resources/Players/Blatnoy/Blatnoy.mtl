@@ -1,0 +1,74 @@
+# Exported from Fuse 1.3.0
+
+newmtl Eyewear
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.00 1.00 1.00
+map_Kd Blatnoy_Eyewear_diffuse.png
+map_Ks Blatnoy_Eyewear_specular.png
+bump Blatnoy_Eyewear_normal.png
+map_Ns Blatnoy_Eyewear_gloss.png
+
+newmtl Bottom
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.00 1.00 1.00
+map_Kd Blatnoy_Bottom_diffuse.png
+map_Ks Blatnoy_Bottom_specular.png
+bump Blatnoy_Bottom_normal.png
+map_Ns Blatnoy_Bottom_gloss.png
+
+newmtl Shoes
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.00 1.00 1.00
+map_Kd Blatnoy_Shoes_diffuse.png
+map_Ks Blatnoy_Shoes_specular.png
+bump Blatnoy_Shoes_normal.png
+map_Ns Blatnoy_Shoes_gloss.png
+
+newmtl Top
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.00 1.00 1.00
+map_Kd Blatnoy_Top_diffuse.png
+map_Ks Blatnoy_Top_specular.png
+bump Blatnoy_Top_normal.png
+map_Ns Blatnoy_Top_gloss.png
+
+newmtl Moustache
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.00 1.00 1.00
+map_Kd Blatnoy_Moustache_diffuse.png
+map_Ks Blatnoy_Moustache_specular.png
+bump Blatnoy_Moustache_normal.png
+map_Ns Blatnoy_Moustache_gloss.png
+
+newmtl Body
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.00 1.00 1.00
+map_Kd Blatnoy_Body_diffuse.png
+map_Ks Blatnoy_Body_specular.png
+bump Blatnoy_Body_normal.png
+map_Ns Blatnoy_Body_gloss.png
+
