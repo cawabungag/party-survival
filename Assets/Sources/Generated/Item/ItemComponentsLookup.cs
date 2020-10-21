@@ -11,16 +11,18 @@ public static class ItemComponentsLookup {
     public const int EcsCommonComponentsDestroyed = 0;
     public const int EcsCommonComponentsOwner = 1;
     public const int EcsCommonComponentsUid = 2;
-    public const int EcsItemComponentsAmount = 3;
-    public const int EcsItemComponentsItemType = 4;
-    public const int ItemEcsCommonComponentsDestroyedListener = 5;
+    public const int EcsCoreComponentsUid = 3;
+    public const int EcsItemComponentsAmount = 4;
+    public const int EcsItemComponentsItemType = 5;
+    public const int ItemEcsCommonComponentsDestroyedListener = 6;
 
-    public const int TotalComponents = 6;
+    public const int TotalComponents = 7;
 
     public static readonly string[] componentNames = {
         "EcsCommonComponentsDestroyed",
         "EcsCommonComponentsOwner",
         "EcsCommonComponentsUid",
+        "EcsCoreComponentsUid",
         "EcsItemComponentsAmount",
         "EcsItemComponentsItemType",
         "ItemEcsCommonComponentsDestroyedListener"
@@ -30,6 +32,7 @@ public static class ItemComponentsLookup {
         typeof(Ecs.Common.Components.DestroyedComponent),
         typeof(Ecs.Common.Components.OwnerComponent),
         typeof(Ecs.Common.Components.UidComponent),
+        typeof(Ecs.Core.Components.UidComponent),
         typeof(Ecs.Item.Components.AmountComponent),
         typeof(Ecs.Item.Components.ItemTypeComponent),
         typeof(ItemEcsCommonComponentsDestroyedListenerComponent)

@@ -32,12 +32,12 @@ namespace Ecs.Game.System
 			for (var i = 0; i < buffer.Count; i++)
 			{
 				var entity = buffer[i];
-				if (!entity.hasEcsGamePosition || !entity.hasEcsGameDesiredDirectional || !entity.hasEcsGameUnitsSpeed || !_gameContext.hasEcsGameInputDirectional)
+				if (!entity.hasEcsGamePosition || !entity.hasEcsGameDesiredDirectional ||
+				    !entity.hasEcsGameUnitsSpeed || !_gameContext.hasEcsGameInputDirectional)
 					continue;
 
 				var desiredDirection = _gameContext.ecsGameInputDirectional.Value;
 				entity.ReplaceEcsGameDesiredDirectional(desiredDirection);
-
 				var speed = entity.ecsGameUnitsSpeed.Value;
 				var velocity = speed * Time.deltaTime * desiredDirection;
 				entity.ReplaceEcsGameVelocity(velocity);

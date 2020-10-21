@@ -1,4 +1,3 @@
-using DB.Units.Characteristics;
 using DB.Units.Prefabs;
 using Ecs.View;
 using Ecs.View.Impls.Game;
@@ -27,7 +26,7 @@ namespace Services.Unit.Impls.Strategies
 		{
 			var unitType = entity.ecsGameObjectType.Value;
 			var unit = _unitDatabase.GetUnitPrefab(unitType);
-			var view = _diContainer.InstantiatePrefabForComponent<GameObjectView>(unit.Prefab, entity.ecsGamePosition.value,
+			var view = _diContainer.InstantiatePrefabForComponent<UnitObjectView>(unit.Prefab, entity.ecsGamePosition.value,
 				Quaternion.identity, null);
 			
 			return view;

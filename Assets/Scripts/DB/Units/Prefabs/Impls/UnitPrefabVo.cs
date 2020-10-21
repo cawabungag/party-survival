@@ -8,10 +8,10 @@ namespace DB.Units.Prefabs.Impls
 	public class UnitPrefabVo
 	{
 		[SerializeField] private EObjectType _unitId;
-		[SerializeField] private GameObjectView _prefab;
+		[SerializeField] private UnitObjectView _prefab;
 		
 		public EObjectType UnitId => _unitId;
-		public GameObjectView Prefab => _prefab;
+		public UnitObjectView Prefab => _prefab;
 		
 	}
 }
