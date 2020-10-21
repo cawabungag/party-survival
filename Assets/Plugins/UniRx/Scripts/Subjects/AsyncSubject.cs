@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using UniRx.InternalUtil;
-
 #if (NET_4_6 || NET_STANDARD_2_0)
 using System.Runtime.CompilerServices;
 using System.Threading;

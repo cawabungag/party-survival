@@ -1,5 +1,4 @@
 ﻿using System;
-
 #if UniRxLibrary
 using UnityObservable = UniRx.ObservableUnity;
 #else

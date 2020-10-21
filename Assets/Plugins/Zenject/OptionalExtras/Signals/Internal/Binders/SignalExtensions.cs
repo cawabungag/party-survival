@@ -1,4 +1,5 @@
 using System;
+
 namespace Zenject
 {
     public static class SignalExtensions

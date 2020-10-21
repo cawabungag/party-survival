@@ -1,16 +1,12 @@
+#if !NOT_UNITY3D
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using ModestTree;
-using Zenject.Internal;
 using System.Linq;
-using TypeExtensions = ModestTree.TypeExtensions;
-
-#if !NOT_UNITY3D
+using ModestTree;
 using UnityEngine;
-
+using Zenject.Internal;
 #if UNITY_EDITOR
-using UnityEditor;
+
 #endif
 
 #endif
