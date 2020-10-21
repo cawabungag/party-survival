@@ -60,6 +60,7 @@ public partial class Contexts {
 
     public const string EcsCommonComponentsOwner = "EcsCommonComponentsOwner";
     public const string EcsCommonComponentsUid = "EcsCommonComponentsUid";
+    public const string EcsCoreComponentsUid = "EcsCoreComponentsUid";
 
     [Entitas.CodeGeneration.Attributes.PostConstructor]
     public void InitializeEntityIndices() {
@@ -80,6 +81,15 @@ public partial class Contexts {
             EcsCommonComponentsUid,
             item.GetGroup(ItemMatcher.EcsCommonComponentsUid),
             (e, c) => ((Ecs.Common.Components.UidComponent)c).Value));
+
+        game.AddEntityIndex(new Entitas.PrimaryEntityIndex<GameEntity, Ecs.Core.Uid>(
+            EcsCoreComponentsUid,
+            game.GetGroup(GameMatcher.EcsCoreComponentsUid),
+            (e, c) => ((Ecs.Core.Components.UidComponent)c).Value));
+        item.AddEntityIndex(new Entitas.PrimaryEntityIndex<ItemEntity, Ecs.Core.Uid>(
+            EcsCoreComponentsUid,
+            item.GetGroup(ItemMatcher.EcsCoreComponentsUid),
+            (e, c) => ((Ecs.Core.Components.UidComponent)c).Value));
     }
 }
 
@@ -99,6 +109,14 @@ public static class ContextsExtensions {
 
     public static ItemEntity GetEntityWithEcsCommonComponentsUid(this ItemContext context, Ecs.Core.Uid Value) {
         return ((Entitas.PrimaryEntityIndex<ItemEntity, Ecs.Core.Uid>)context.GetEntityIndex(Contexts.EcsCommonComponentsUid)).GetEntity(Value);
+    }
+
+    public static GameEntity GetEntityWithEcsCoreComponentsUid(this GameContext context, Ecs.Core.Uid Value) {
+        return ((Entitas.PrimaryEntityIndex<GameEntity, Ecs.Core.Uid>)context.GetEntityIndex(Contexts.EcsCoreComponentsUid)).GetEntity(Value);
+    }
+
+    public static ItemEntity GetEntityWithEcsCoreComponentsUid(this ItemContext context, Ecs.Core.Uid Value) {
+        return ((Entitas.PrimaryEntityIndex<ItemEntity, Ecs.Core.Uid>)context.GetEntityIndex(Contexts.EcsCoreComponentsUid)).GetEntity(Value);
     }
 }
 //------------------------------------------------------------------------------
