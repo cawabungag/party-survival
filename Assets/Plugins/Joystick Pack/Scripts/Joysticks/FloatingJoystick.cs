@@ -1,26 +1,30 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UniRx;
 using UnityEngine.EventSystems;
 
-public class FloatingJoystick : Joystick
+namespace Plugins.Joystick_Pack.Scripts.Joysticks
 {
-    protected override void Start()
-    {
-        base.Start();
-        background.gameObject.SetActive(false);
-    }
+	public class FloatingJoystick : Joystick
+	{
+		public ReactiveCommand OnPointerUpHandler = new ReactiveCommand();
 
-    public override void OnPointerDown(PointerEventData eventData)
-    {
-        background.anchoredPosition = ScreenPointToAnchoredPosition(eventData.position);
-        background.gameObject.SetActive(true);
-        base.OnPointerDown(eventData);
-    }
+		protected override void Start()
+		{
+			base.Start();
+			background.gameObject.SetActive(false);
+		}
 
-    public override void OnPointerUp(PointerEventData eventData)
-    {
-        background.gameObject.SetActive(false);
-        base.OnPointerUp(eventData);
-    }
+		public override void OnPointerDown(PointerEventData eventData)
+		{
+			background.anchoredPosition = ScreenPointToAnchoredPosition(eventData.position);
+			background.gameObject.SetActive(true);
+			base.OnPointerDown(eventData);
+		}
+
+		public override void OnPointerUp(PointerEventData eventData)
+		{
+			OnPointerUpHandler?.Execute();
+			background.gameObject.SetActive(false);
+			base.OnPointerUp(eventData);
+		}
+	}
 }

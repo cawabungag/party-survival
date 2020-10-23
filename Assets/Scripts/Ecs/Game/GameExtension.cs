@@ -19,5 +19,17 @@ namespace Ecs.Game
 			entity.isEcsGameFlagsUnit = true;
 			return entity;
 		}
+		public static GameEntity CreateEnemy(this GameContext context, EObjectType unitType, Vector3 position)
+		{
+			var entity = context.CreateEntity();
+			entity.AddEcsCommonComponentsUid(UidGenerator.Next());
+			entity.AddEcsGameObjectType(unitType);
+			entity.AddEcsGamePosition(position);
+			entity.AddEcsGameDesiredDirectional(Vector2.zero);
+			entity.AddEcsGameMovementType(EMovementType.Walk);
+			entity.isEcsGameFlagsInstantiated = true;
+			entity.isEnemy = true;
+			return entity;
+		}
 	}
 }

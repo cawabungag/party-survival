@@ -1,4 +1,5 @@
 using System;
+using Plugins.Joystick_Pack.Scripts.Joysticks;
 using SimpleUi.Abstracts;
 using UniRx;
 using UnityEngine;
@@ -20,6 +21,7 @@ namespace UI.Game.Input.Impls
 		public void Initialize()
 		{
 			FloatingJoystick floatingJoystick = View.Joystick;
+			floatingJoystick.OnPointerUpHandler.Subscribe(unit => OnPointerUp()).AddTo(_disposable);
 			Observable.EveryUpdate().Subscribe(l =>
 			{
 				OnHorizontal(floatingJoystick.Horizontal);
@@ -43,6 +45,12 @@ namespace UI.Game.Input.Impls
 			_gameContext.ReplaceEcsGameInputDirectional(value);
 		}
 
+		private void OnPointerUp()
+		{
+			_gameContext.ReplaceEcsGameInputDirectional(Vector2.zero);
+			_gameContext.ReplaceEcsGameInputVertical(0f);
+			_gameContext.ReplaceEcsGameInputHorizontal(0f);
+		}
 
 		public void Dispose()
 		{

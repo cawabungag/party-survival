@@ -15,3 +15,7 @@ MonoBehaviour:
   _unitCharacteristicDatabase: {fileID: 11400000, guid: 2396964298f7248819b519d44c102797,
     type: 2}
   _uniPrefabDatabase: {fileID: 11400000, guid: adc166c70cbb14ae496fbcfcc2a39696, type: 2}
+  _enemyCharacteristicsDatabase: {fileID: 11400000, guid: 72d21dc25b7984d9581621c6a997bae0,
+    type: 2}
+  _enemyPrefabDatabase: {fileID: 11400000, guid: d65da782db5a54672ab0cfb662bed4d6,
+    type: 2}
