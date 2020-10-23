@@ -1,4 +1,5 @@
 using Ecs.Core.Impls;
+using Ecs.Game.Camera;
 using Services.Items.Impls;
 using Services.Unit.Impls;
 using Services.Unit.Impls.Strategies;
@@ -10,7 +11,7 @@ namespace Installers
 {
 	public class GameInstaller : MonoInstaller
 	{
-		[SerializeField] private Camera _camera;
+		[SerializeField] private CameraView _camera;
 
 		public override void InstallBindings()
 		{
@@ -23,7 +24,7 @@ namespace Installers
 
 		private void BindCamera()
 		{
-			Container.BindInterfacesTo<Camera>().FromInstance(_camera);
+			Container.BindInterfacesTo<CameraView>().FromInstance(_camera);
 		}
 
 		private void BindWindows()

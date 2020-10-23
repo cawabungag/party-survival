@@ -33,6 +33,9 @@ namespace Entitas.Generated.Installer {
 			//  0750
 			container.BindInterfacesAndSelfTo<InstantiateWeaponSystem>().AsSingle();	// 0750 
 
+			//  0780
+			container.BindInterfacesAndSelfTo<CameraMoveSystem>().AsSingle();	// 0780 
+
 			//  1000
 			container.BindInterfacesAndSelfTo<RemoveItemSystem>().AsSingle();	// 1000 
 		 }

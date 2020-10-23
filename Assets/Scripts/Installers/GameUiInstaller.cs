@@ -9,7 +9,7 @@ namespace Installers
 	public class GameUiInstaller : ScriptableObjectInstaller
 	{
 		[SerializeField] private Canvas canvas;
-		[SerializeField] private InputView inputView;
+		[SerializeField] private Object inputView;
 
 		public override void InstallBindings()
 		{
