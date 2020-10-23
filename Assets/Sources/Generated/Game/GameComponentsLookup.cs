@@ -35,15 +35,15 @@ public static class GameComponentsLookup {
     public const int EcsGameVelocity = 24;
     public const int EcsGameWeaponsDamage = 25;
     public const int EcsGameWeaponsFiringFrequency = 26;
-    public const int EcsCommonComponentsNameListener = 27;
-    public const int EcsGameDesiredDirectionalListener = 28;
-    public const int EcsGameMovementTypeListener = 29;
-    public const int EcsGameObjectTypeListener = 30;
-    public const int EcsGamePositionListener = 31;
-    public const int EcsGameVelocityListener = 32;
-    public const int Enemy = 33;
-    public const int GameEcsCommonComponentsDestroyedListener = 34;
-    public const int Shells = 35;
+    public const int EcsGameWeaponsShells = 27;
+    public const int EcsCommonComponentsNameListener = 28;
+    public const int EcsGameDesiredDirectionalListener = 29;
+    public const int EcsGameMovementTypeListener = 30;
+    public const int EcsGameObjectTypeListener = 31;
+    public const int EcsGamePositionListener = 32;
+    public const int EcsGameVelocityListener = 33;
+    public const int Enemy = 34;
+    public const int GameEcsCommonComponentsDestroyedListener = 35;
 
     public const int TotalComponents = 36;
 
@@ -75,6 +75,7 @@ public static class GameComponentsLookup {
         "EcsGameVelocity",
         "EcsGameWeaponsDamage",
         "EcsGameWeaponsFiringFrequency",
+        "EcsGameWeaponsShells",
         "EcsCommonComponentsNameListener",
         "EcsGameDesiredDirectionalListener",
         "EcsGameMovementTypeListener",
@@ -82,8 +83,7 @@ public static class GameComponentsLookup {
         "EcsGamePositionListener",
         "EcsGameVelocityListener",
         "Enemy",
-        "GameEcsCommonComponentsDestroyedListener",
-        "Shells"
+        "GameEcsCommonComponentsDestroyedListener"
     };
 
     public static readonly System.Type[] componentTypes = {
@@ -114,6 +114,7 @@ public static class GameComponentsLookup {
         typeof(Ecs.Game.VelocityComponent),
         typeof(Ecs.Game.Weapons.DamageComponent),
         typeof(Ecs.Game.Weapons.FiringFrequencyComponent),
+        typeof(Ecs.Game.Weapons.ShellsComponent),
         typeof(EcsCommonComponentsNameListenerComponent),
         typeof(EcsGameDesiredDirectionalListenerComponent),
         typeof(EcsGameMovementTypeListenerComponent),
@@ -121,7 +122,6 @@ public static class GameComponentsLookup {
         typeof(EcsGamePositionListenerComponent),
         typeof(EcsGameVelocityListenerComponent),
         typeof(EnemyComponent),
-        typeof(GameEcsCommonComponentsDestroyedListenerComponent),
-        typeof(ShellsComponent)
+        typeof(GameEcsCommonComponentsDestroyedListenerComponent)
     };
 }

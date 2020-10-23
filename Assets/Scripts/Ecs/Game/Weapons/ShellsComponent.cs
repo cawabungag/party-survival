@@ -1,12 +1,15 @@
 ﻿using Entitas;
 
-[Game]
-public class ShellsComponent : IComponent
+namespace Ecs.Game.Weapons
 {
-   public float Value;
+	[Game]
+	public class ShellsComponent : IComponent
+	{
+		public float Value;
 
-   public override string ToString()
-   {
-      return Value.ToString();
-   }
+		public override string ToString()
+		{
+			return Value.ToString();
+		}
+	}
 }

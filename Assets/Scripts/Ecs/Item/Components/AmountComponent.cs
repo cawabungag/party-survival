@@ -1,5 +1,4 @@
-﻿using Ecs.Access;
-using Entitas;
+﻿using Entitas;
 
 namespace Ecs.Item.Components
 {
@@ -7,28 +6,9 @@ namespace Ecs.Item.Components
 	public class AmountComponent : IComponent
 	{
 		public int Value;
-	}
-
-	public interface IAmountProperty : IProperty
-	{
-		int Amount { get; set; }
-	}
-
-	public class AmountPropertyAccess : IPropertyAccess<ItemEntity, IAmountProperty>
-	{
-		public void SetObjectValue(ItemEntity obj, IAmountProperty property)
+		public override string ToString()
 		{
-			obj.RemoveEcsItemComponentsAmount();
-		}
-
-		public void SetPropertyValue(ItemEntity obj, IAmountProperty property)
-		{
-			property.Amount = obj.ecsItemComponentsAmount.Value;
-		}
-
-		public void Reset(IAmountProperty property)
-		{
-			property.Amount = default;
+			return $"Amount: {Value}";
 		}
 	}
 }

@@ -22,8 +22,6 @@ namespace DB.Weapons.Characteristics.Impls
         
             throw new ArgumentException($"[{nameof(WeaponCharacteristicsDatabase)}] No WeaponCharacteristicVo for WeaponId:{weaponId}");
         }
-
-   
     }
 }
 

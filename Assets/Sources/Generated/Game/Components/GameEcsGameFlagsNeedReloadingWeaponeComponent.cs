@@ -8,25 +8,25 @@
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    static readonly Ecs.Game.Flags.NeedReloadingWeaponeComponent ecsGameFlagsNeedReloadingWeaponeComponent = new Ecs.Game.Flags.NeedReloadingWeaponeComponent();
+    public Ecs.Game.Flags.NeedReloadingWeaponeComponent ecsGameFlagsNeedReloadingWeapone { get { return (Ecs.Game.Flags.NeedReloadingWeaponeComponent)GetComponent(GameComponentsLookup.EcsGameFlagsNeedReloadingWeapone); } }
+    public bool hasEcsGameFlagsNeedReloadingWeapone { get { return HasComponent(GameComponentsLookup.EcsGameFlagsNeedReloadingWeapone); } }
 
-    public bool isEcsGameFlagsNeedReloadingWeapone {
-        get { return HasComponent(GameComponentsLookup.EcsGameFlagsNeedReloadingWeapone); }
-        set {
-            if (value != isEcsGameFlagsNeedReloadingWeapone) {
-                var index = GameComponentsLookup.EcsGameFlagsNeedReloadingWeapone;
-                if (value) {
-                    var componentPool = GetComponentPool(index);
-                    var component = componentPool.Count > 0
-                            ? componentPool.Pop()
-                            : ecsGameFlagsNeedReloadingWeaponeComponent;
+    public void AddEcsGameFlagsNeedReloadingWeapone(bool newValue) {
+        var index = GameComponentsLookup.EcsGameFlagsNeedReloadingWeapone;
+        var component = CreateComponent<Ecs.Game.Flags.NeedReloadingWeaponeComponent>(index);
+        component.Value = newValue;
+        AddComponent(index, component);
+    }
 
-                    AddComponent(index, component);
-                } else {
-                    RemoveComponent(index);
-                }
-            }
-        }
+    public void ReplaceEcsGameFlagsNeedReloadingWeapone(bool newValue) {
+        var index = GameComponentsLookup.EcsGameFlagsNeedReloadingWeapone;
+        var component = CreateComponent<Ecs.Game.Flags.NeedReloadingWeaponeComponent>(index);
+        component.Value = newValue;
+        ReplaceComponent(index, component);
+    }
+
+    public void RemoveEcsGameFlagsNeedReloadingWeapone() {
+        RemoveComponent(GameComponentsLookup.EcsGameFlagsNeedReloadingWeapone);
     }
 }
 

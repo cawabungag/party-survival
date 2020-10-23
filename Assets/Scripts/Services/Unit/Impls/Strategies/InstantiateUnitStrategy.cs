@@ -1,3 +1,4 @@
+using DB.Units;
 using DB.Units.Characteristics;
 using DB.Units.Characteristics.Impls;
 using DB.Units.Prefabs;
@@ -12,7 +13,6 @@ namespace Services.Unit.Impls.Strategies
 		private readonly IUnitCharacteristicDatabase _unitCharacteristicDatabase;
 		private readonly IUnitPrefabDatabase _unitPrefabDatabase;
 
-
 		public InstantiateUnitStrategy(
 			DiContainer diContainer,
 			IUnitCharacteristicDatabase unitCharacteristicDatabase,
@@ -26,9 +26,9 @@ namespace Services.Unit.Impls.Strategies
 
 		public override ILinkable Create(GameEntity entity)
 		{
-			var linkable = base.Create(entity);
-			var unitType = entity.ecsGameObjectType.Value;
-			var setting = _unitCharacteristicDatabase.GetCharacteristics(unitType);
+			ILinkable linkable = base.Create(entity);
+			EObjectType unitType = entity.ecsGameObjectType.Value;
+			UnitCharacteristicVo setting = _unitCharacteristicDatabase.GetCharacteristics(unitType);
 			InitializeNonSerializableParameters(entity, setting);
 			return linkable;
 		}
