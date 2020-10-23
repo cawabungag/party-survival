@@ -1,4 +1,6 @@
+using DB.Units;
 using DB.Units.Prefabs;
+using DB.Units.Prefabs.Impls;
 using Ecs.View;
 using Ecs.View.Impls.Game;
 using UnityEngine;
@@ -24,9 +26,9 @@ namespace Services.Unit.Impls.Strategies
 
 		public virtual ILinkable Create(GameEntity entity)
 		{
-			var unitType = entity.ecsGameObjectType.Value;
-			var unit = _unitDatabase.GetUnitPrefab(unitType);
-			var view = _diContainer.InstantiatePrefabForComponent<UnitObjectView>(unit.Prefab, entity.ecsGamePosition.value,
+			EObjectType unitType = entity.ecsGameObjectType.Value;
+			UnitPrefabVo unit = _unitDatabase.GetUnitPrefab(unitType);
+			UnitObjectView view = _diContainer.InstantiatePrefabForComponent<UnitObjectView>(unit.Prefab, entity.ecsGamePosition.value,
 				Quaternion.identity, null);
 			
 			return view;

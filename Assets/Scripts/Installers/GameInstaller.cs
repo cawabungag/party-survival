@@ -41,6 +41,7 @@ namespace Installers
 		private void BindStrategies()
 		{
 			Container.BindInterfacesTo<InstantiateUnitStrategy>().AsSingle();
+			Container.BindInterfacesTo<InstantiateEnemyStrategy>().AsSingle();
 		}
 
 		private void BindFactories()
