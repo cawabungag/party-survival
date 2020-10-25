@@ -5,5 +5,6 @@ namespace DB.Units.MovementType
 		Walk,
 		Idle,
 		Run,
+		Die
 	}
 }
