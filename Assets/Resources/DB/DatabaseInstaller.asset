@@ -19,3 +19,4 @@ MonoBehaviour:
     type: 2}
   _enemyPrefabDatabase: {fileID: 11400000, guid: d65da782db5a54672ab0cfb662bed4d6,
     type: 2}
+  _aiTaskDatabase: {fileID: 11400000, guid: 02c9b54f3a2834f538cf3fb261351a11, type: 2}

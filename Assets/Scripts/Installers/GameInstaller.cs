@@ -1,3 +1,4 @@
+using Ecs.Core.Impls;
 using Ecs.Game.Camera;
 using Game.Ai.Impls;
 using Game.Ai.Tasks.Impls;
@@ -41,12 +42,14 @@ namespace Installers
 
 			Container.BindInterfacesTo<AiTaskBuildersLibrary>().AsSingle();
 			Container.BindInterfacesTo<BehaviourTreeFactory>().AsSingle();
+			
+			Container.BindInterfacesTo<UnityTimeProvider>().AsSingle();
+			Container.BindInterfacesTo<UnityRandomProvider>().AsSingle();
 		}
 
 		private void BindStrategies()
 		{
 			Container.BindInterfacesTo<InstantiateUnitStrategy>().AsSingle();
-			Container.BindInterfacesTo<InstantiateEnemyStrategy>().AsSingle();
 		}
 
 		private void BindFactories()
