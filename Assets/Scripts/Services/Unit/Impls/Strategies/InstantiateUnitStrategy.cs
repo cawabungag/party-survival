@@ -3,6 +3,7 @@ using DB.Units.Characteristics;
 using DB.Units.Characteristics.Impls;
 using DB.Units.Prefabs;
 using Ecs.View;
+using Game.Ai;
 using Zenject;
 
 namespace Services.Unit.Impls.Strategies
@@ -16,13 +17,13 @@ namespace Services.Unit.Impls.Strategies
 		public InstantiateUnitStrategy(
 			DiContainer diContainer,
 			IUnitCharacteristicDatabase unitCharacteristicDatabase,
-			IUnitPrefabDatabase unitPrefabDatabase
-		) : base(diContainer, unitPrefabDatabase)
+			IUnitPrefabDatabase unitPrefabDatabase, IBehaviourTreeFactory behaviourTreeFactory
+		) : base(diContainer, unitPrefabDatabase, behaviourTreeFactory)
 		{
 			_unitCharacteristicDatabase = unitCharacteristicDatabase;
 		}
 
-		public override bool CanInstantiate(GameEntity entity) => entity.isEcsGameFlagsUnit;
+		public override bool CanInstantiate(GameEntity entity) => entity.isEcsGameFlagsUnit || entity.isEnemy;
 
 		public override ILinkable Create(GameEntity entity)
 		{

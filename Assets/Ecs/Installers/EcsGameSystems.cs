@@ -33,6 +33,9 @@ namespace Entitas.Generated.Installer {
 			//  0780
 			container.BindInterfacesAndSelfTo<CameraMoveSystem>().AsSingle();	// 0780 
 
+			//  0800
+			container.BindInterfacesAndSelfTo<BehaviourTreeTickSystem>().AsSingle();	// 0800 
+
 			//  1000
 			container.BindInterfacesAndSelfTo<RemoveItemSystem>().AsSingle();	// 1000 
 		 }

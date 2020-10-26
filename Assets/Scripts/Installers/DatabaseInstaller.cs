@@ -1,3 +1,5 @@
+using DB.Units.AiTasks;
+using DB.Units.AiTasks.Impls;
 using DB.Units.Characteristics;
 using DB.Units.Characteristics.Impls;
 using DB.Units.EnemyUnit.Characteristics;
@@ -22,6 +24,9 @@ namespace Installers
 		[SerializeField] private EnemyCharacteristicsDatabase _enemyCharacteristicsDatabase;
 		[SerializeField] private EnemyPrefabDatabase _enemyPrefabDatabase;
 
+		//Ai
+		[SerializeField] private AiTaskDatabase _aiTaskDatabase;
+
 		public override void InstallBindings()
 		{
 			//Units
@@ -31,6 +36,9 @@ namespace Installers
 			//Enemy
 			Container.Bind<IEnemyCharacteristicsDatabase>().FromInstance(_enemyCharacteristicsDatabase).AsSingle();
 			Container.Bind<IEnemyPrefabDatabase>().FromInstance(_enemyPrefabDatabase).AsSingle();
+			
+			//Ai
+			Container.Bind<IAiTaskDatabase>().FromInstance(_aiTaskDatabase).AsSingle();
 		}
 	}
 }
