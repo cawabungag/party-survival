@@ -1,6 +1,7 @@
-using Ecs.Core.Impls;
 using Ecs.Game.Camera;
+using Game.Ai.Impls;
 using Game.Ai.Tasks.Impls;
+using Game.Ai.Tasks.Impls.Enemy;
 using Services.Items.Impls;
 using Services.Unit.Impls;
 using Services.Unit.Impls.Strategies;
@@ -37,6 +38,9 @@ namespace Installers
 		private void BindServices()
 		{
 			Container.BindInterfacesTo<ItemService>().AsSingle();
+
+			Container.BindInterfacesTo<AiTaskBuildersLibrary>().AsSingle();
+			Container.BindInterfacesTo<BehaviourTreeFactory>().AsSingle();
 		}
 
 		private void BindStrategies()
@@ -48,9 +52,12 @@ namespace Installers
 		private void BindFactories()
 		{
 			Container.BindInterfacesTo<UnitFactory>().AsSingle();
-			
+
 			//Ai task builder
 			Container.BindInterfacesTo<WanderActionBuilder>().AsSingle();
+			Container.BindInterfacesTo<FindClosestUnitsBuilder>().AsSingle();
+			Container.BindInterfacesTo<GoToTargetActionBuilder>().AsSingle();
+			Container.BindInterfacesTo<AttackActionBuilder>().AsSingle();
 		}
 	}
 }
