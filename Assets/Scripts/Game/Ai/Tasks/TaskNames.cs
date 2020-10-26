@@ -2,6 +2,6 @@ namespace Game.Ai.Tasks
 {
 	public class TaskNames
 	{
-		public const string FIND_UNIT = "find closest unit";
+		public const string WANDER = "wander";
 	}
 }

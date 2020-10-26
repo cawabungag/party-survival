@@ -22,27 +22,28 @@ public static class GameComponentsLookup {
     public const int EcsGameInputDirectional = 11;
     public const int EcsGameInputHorizontal = 12;
     public const int EcsGameInputVertical = 13;
-    public const int EcsGameMovementType = 14;
-    public const int EcsGameObjectType = 15;
-    public const int EcsGamePosition = 16;
-    public const int EcsGameUnitsHealth = 17;
-    public const int EcsGameUnitsMaxHealth = 18;
-    public const int EcsGameUnitsRangeView = 19;
-    public const int EcsGameUnitsSpeed = 20;
-    public const int EcsGameVelocity = 21;
-    public const int EcsGameWeaponsDamage = 22;
-    public const int EcsGameWeaponsFiringFrequency = 23;
-    public const int EcsGameWeaponsShells = 24;
-    public const int EcsCommonComponentsNameListener = 25;
-    public const int EcsGameDesiredDirectionalListener = 26;
-    public const int EcsGameMovementTypeListener = 27;
-    public const int EcsGameObjectTypeListener = 28;
-    public const int EcsGamePositionListener = 29;
-    public const int EcsGameVelocityListener = 30;
-    public const int Enemy = 31;
-    public const int GameEcsCommonComponentsDestroyedListener = 32;
+    public const int EcsGameMoveEndTime = 14;
+    public const int EcsGameMovementType = 15;
+    public const int EcsGameObjectType = 16;
+    public const int EcsGamePosition = 17;
+    public const int EcsGameUnitsHealth = 18;
+    public const int EcsGameUnitsMaxHealth = 19;
+    public const int EcsGameUnitsRangeView = 20;
+    public const int EcsGameUnitsSpeed = 21;
+    public const int EcsGameVelocity = 22;
+    public const int EcsGameWeaponsDamage = 23;
+    public const int EcsGameWeaponsFiringFrequency = 24;
+    public const int EcsGameWeaponsShells = 25;
+    public const int EcsCommonComponentsNameListener = 26;
+    public const int EcsGameDesiredDirectionalListener = 27;
+    public const int EcsGameMovementTypeListener = 28;
+    public const int EcsGameObjectTypeListener = 29;
+    public const int EcsGamePositionListener = 30;
+    public const int EcsGameVelocityListener = 31;
+    public const int Enemy = 32;
+    public const int GameEcsCommonComponentsDestroyedListener = 33;
 
-    public const int TotalComponents = 33;
+    public const int TotalComponents = 34;
 
     public static readonly string[] componentNames = {
         "EcsCommonComponentsDestroyed",
@@ -59,6 +60,7 @@ public static class GameComponentsLookup {
         "EcsGameInputDirectional",
         "EcsGameInputHorizontal",
         "EcsGameInputVertical",
+        "EcsGameMoveEndTime",
         "EcsGameMovementType",
         "EcsGameObjectType",
         "EcsGamePosition",
@@ -95,6 +97,7 @@ public static class GameComponentsLookup {
         typeof(Ecs.Game.Input.DirectionalComponent),
         typeof(Ecs.Game.Input.HorizontalComponent),
         typeof(Ecs.Game.Input.VerticalComponent),
+        typeof(Ecs.Game.MoveEndTimeComponent),
         typeof(Ecs.Game.MovementTypeComponent),
         typeof(Ecs.Game.ObjectTypeComponent),
         typeof(Ecs.Game.PositionComponent),
