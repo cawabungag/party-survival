@@ -4,12 +4,12 @@ using UnityEngine;
 
 namespace DB.Weapons.Prefabs.Impls
 {
-    [CreateAssetMenu(menuName = "Installers/WeaponPrefabDatabase", fileName = "WeaponPrefabDatabasex")]
+    [CreateAssetMenu(menuName = "Installers/WeaponPrefabDatabase", fileName = "WeaponPrefabDatabase")]
     public class WeaponPrefabDatabase : ScriptableObject, IWeaponPrefabDatabase
     {
         [SerializeField] private WeaponPrefabVo[] _weaponPrefabVos; 
     
-        public WeaponPrefabVo GetWeaponPrefabVoPrefab(EObjectType weaponId)
+        public WeaponPrefabVo GetWeaponPrefabVoPrefab(EWeaponType weaponId)
         {
             for (int i = 0; i < _weaponPrefabVos.Length; i++)
             {
