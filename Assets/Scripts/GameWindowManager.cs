@@ -1,5 +1,7 @@
 using DB.Units;
+using DB.Weapons;
 using Ecs.Game;
+using Entitas;
 using SimpleUi.Signals;
 using UI.Game.Windows;
 using UnityEngine;
@@ -23,5 +25,7 @@ public class GameWindowManager : IInitializable
 		m_gameContext.CreateUnit(EObjectType.Unit, new Vector3(1.5f, 0, 1.5f));
 		m_gameContext.CreateUnit(EObjectType.Unit, new Vector3(-1.5f, 0, -1.5f));
 		m_gameContext.CreateEnemy(EObjectType.ZombieUnit, Vector3.zero);
+		m_gameContext.CreateWeapon(EWeaponType.AK47, Vector3.zero);
+
 	}
 }

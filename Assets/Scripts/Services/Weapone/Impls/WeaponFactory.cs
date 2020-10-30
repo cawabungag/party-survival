@@ -12,6 +12,7 @@ namespace Services.Weapone.Impls
             _instantiateWeaponStrategies = instantiateWeaponStrategies;
         }
         
+        
         public ILinkable Create(GameEntity entity)
         {
             foreach (var instantiateWeaponStrategy in _instantiateWeaponStrategies)
@@ -22,5 +23,7 @@ namespace Services.Weapone.Impls
 
             throw new System.Exception($"[{nameof(WeaponFactory)}] Cannot instantiate weapon {entity}");
         }
+
+       
     }
 }

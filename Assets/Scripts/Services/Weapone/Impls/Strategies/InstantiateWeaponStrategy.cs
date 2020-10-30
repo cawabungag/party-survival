@@ -21,8 +21,8 @@ namespace Services.Weapone.Impls.Strategies
         {
             _weaponCharacteristicsDatabase = weaponCharacteristicsDatabase;
         }
-        
-        public override bool CanInstantiate(GameEntity entity) => entity.isEcsGameFlagsItem || entity.hasEcsItemComponentsWeaponType;
+
+        public override bool CanInstantiate(GameEntity entity) => entity.ecsGameObjectType.Value == EObjectType.Weapon;
         
         public override ILinkable Create(GameEntity entity)
         {

@@ -2,7 +2,7 @@
 
 namespace Ecs.Game.Flags
 {
-    [Game]
+    [Item]
     public class ItemComponent : IComponent
     {
         

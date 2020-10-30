@@ -8,7 +8,7 @@
         UMP45,
         DesertEagle,   // Heavy pistols
         Magnim500,
-        GlockG22       //Light pistol
+        GlockG22       //Light pistols
 
     }
 }

@@ -630,6 +630,21 @@ PrefabInstance:
       propertyPath: _installerPrefabs.Array.size
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6148947338297041228, guid: 686336009806940faadc59f37678f4bb,
+        type: 3}
+      propertyPath: _parentNewObjectsUnderSceneContext
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6148947338297041228, guid: 686336009806940faadc59f37678f4bb,
+        type: 3}
+      propertyPath: _installerPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6148947338297041228, guid: 686336009806940faadc59f37678f4bb,
+        type: 3}
+      propertyPath: _autoRun
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6148947338297041229, guid: 686336009806940faadc59f37678f4bb,
         type: 3}
       propertyPath: _camera
