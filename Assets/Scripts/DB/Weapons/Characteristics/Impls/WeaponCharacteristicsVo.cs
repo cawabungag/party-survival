@@ -1,5 +1,4 @@
 ﻿using System;
-using DB.Units;
 
 namespace DB.Weapons.Characteristics.Impls
 {
@@ -7,9 +6,9 @@ namespace DB.Weapons.Characteristics.Impls
    public class WeaponCharacteristicsVo
    {  
       public EWeaponType _weaponId;
-      private float _damage;                     //Урон
-      private float _firingFrequency;            //Частота стрельбы
-      private int _shells;                     //Патроны в обойме
+      private float _damage;
+      private float _firingFrequency;
+      private int _shells;
       
       public EWeaponType WeaponId => _weaponId;
       public float Damage => _damage;

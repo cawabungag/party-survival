@@ -29,7 +29,7 @@ namespace Services.Weapone.Impls.Strategies
             Debug.Log("WeaponInstantiated");
             EWeaponType weaponType = entity.ecsItemComponentsWeaponType.Value;
             WeaponPrefabVo weapon = _weaponDatabase.GetWeaponPrefab(weaponType);
-            GameObjectView view = _diContainer.InstantiatePrefabForComponent<GameObjectView>(weapon.Prefab, entity.ecsGamePosition.value, // Проверить
+            GameObjectView view = _diContainer.InstantiatePrefabForComponent<GameObjectView>(weapon.Prefab, entity.ecsGamePosition.value,
                 Quaternion.identity, null);
             return view;
         }

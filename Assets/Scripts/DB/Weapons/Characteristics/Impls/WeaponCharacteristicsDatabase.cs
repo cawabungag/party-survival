@@ -1,5 +1,4 @@
 ﻿using System;
-using DB.Units;
 using UnityEngine;
 
 namespace DB.Weapons.Characteristics.Impls
@@ -15,7 +14,7 @@ namespace DB.Weapons.Characteristics.Impls
             {
                 WeaponCharacteristicsVo weaponCharacteristicsVo = _weaponCharacteristicVos[i];
 
-                if (weaponCharacteristicsVo.WeaponId == weaponId) // Исправить
+                if (weaponCharacteristicsVo.WeaponId == weaponId)
                 {
                     return weaponCharacteristicsVo;
                 }

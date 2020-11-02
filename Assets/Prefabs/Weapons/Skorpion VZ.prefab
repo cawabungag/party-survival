@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3718359669330470082
+--- !u!1 &6196714571243787754
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3718359669330376930}
-  - component: {fileID: 3718359669331671236}
-  - component: {fileID: 3718359669332670980}
+  - component: {fileID: 6196714571244145098}
+  - component: {fileID: 6196714571240753644}
+  - component: {fileID: 6196714571241851692}
   m_Layer: 0
   m_Name: Skorpion_Magazine
   m_TagString: Untagged
@@ -18,35 +18,35 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3718359669330376930
+--- !u!4 &6196714571244145098
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3718359669330470082}
+  m_GameObject: {fileID: 6196714571243787754}
   m_LocalRotation: {x: -0.65818894, y: -1.1487564e-17, z: 1.313976e-17, w: 0.7528528}
   m_LocalPosition: {x: 1.41726e-11, y: 0.030455152, z: -0.29722655}
   m_LocalScale: {x: 0.24509281, y: 0.20068401, z: 0.20068401}
   m_Children: []
-  m_Father: {fileID: 3718359669330376934}
+  m_Father: {fileID: 6196714571244145102}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &3718359669331671236
+--- !u!33 &6196714571240753644
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3718359669330470082}
-  m_Mesh: {fileID: 4300002, guid: eb2136a3cdea8f84bb3b2ca2d025a818, type: 3}
---- !u!23 &3718359669332670980
+  m_GameObject: {fileID: 6196714571243787754}
+  m_Mesh: {fileID: 4300002, guid: 7fdc6d985e9b9bb41b0ebf612c673dcf, type: 3}
+--- !u!23 &6196714571241851692
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3718359669330470082}
+  m_GameObject: {fileID: 6196714571243787754}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -79,7 +79,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!1 &3718359669330470084
+--- !u!1 &6196714571243787756
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -87,9 +87,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3718359669330376932}
-  - component: {fileID: 3718359669331671238}
-  - component: {fileID: 3718359669332670982}
+  - component: {fileID: 6196714571244145100}
+  - component: {fileID: 6196714571240753646}
+  - component: {fileID: 6196714571241851694}
   m_Layer: 0
   m_Name: Skorpion_Body_000
   m_TagString: Untagged
@@ -97,35 +97,35 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3718359669330376932
+--- !u!4 &6196714571244145100
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3718359669330470084}
+  m_GameObject: {fileID: 6196714571243787756}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 0.23842205, y: 0.23842205, z: 0.23842205}
   m_Children: []
-  m_Father: {fileID: 3718359669330376934}
+  m_Father: {fileID: 6196714571244145102}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &3718359669331671238
+--- !u!33 &6196714571240753646
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3718359669330470084}
-  m_Mesh: {fileID: 4300000, guid: eb2136a3cdea8f84bb3b2ca2d025a818, type: 3}
---- !u!23 &3718359669332670982
+  m_GameObject: {fileID: 6196714571243787756}
+  m_Mesh: {fileID: 4300000, guid: 7fdc6d985e9b9bb41b0ebf612c673dcf, type: 3}
+--- !u!23 &6196714571241851694
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3718359669330470084}
+  m_GameObject: {fileID: 6196714571243787756}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -158,7 +158,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!1 &3718359669330470086
+--- !u!1 &6196714571243787758
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -166,7 +166,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3718359669330376934}
+  - component: {fileID: 6196714571244145102}
+  - component: {fileID: -4330070817329929357}
   m_Layer: 0
   m_Name: Skorpion VZ
   m_TagString: Untagged
@@ -174,19 +175,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3718359669330376934
+--- !u!4 &6196714571244145102
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3718359669330470086}
+  m_GameObject: {fileID: 6196714571243787758}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.5191016, y: 1.2929518, z: 0.0065546036}
+  m_LocalPosition: {x: 16.653309, y: -4.2873716, z: 5.412824}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 3718359669330376932}
-  - {fileID: 3718359669330376930}
+  - {fileID: 6196714571244145100}
+  - {fileID: 6196714571244145098}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-4330070817329929357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6196714571243787758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87f3ab6a0c334406a6c2a0a23b07d634, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
