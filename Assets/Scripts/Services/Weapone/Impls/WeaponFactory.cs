@@ -23,7 +23,5 @@ namespace Services.Weapone.Impls
 
             throw new System.Exception($"[{nameof(WeaponFactory)}] Cannot instantiate weapon {entity}");
         }
-
-       
     }
 }

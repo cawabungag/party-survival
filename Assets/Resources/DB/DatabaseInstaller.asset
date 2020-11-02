@@ -20,3 +20,7 @@ MonoBehaviour:
   _enemyPrefabDatabase: {fileID: 11400000, guid: d65da782db5a54672ab0cfb662bed4d6,
     type: 2}
   _aiTaskDatabase: {fileID: 11400000, guid: 02c9b54f3a2834f538cf3fb261351a11, type: 2}
+  _weaponeCharacteristicDatabase: {fileID: 11400000, guid: 17bd046db0f6b6046b82cf6aae01850e,
+    type: 2}
+  _weaponePrefabDatabase: {fileID: 11400000, guid: b446046171cf5a44a90c8632ba6c6e9e,
+    type: 2}

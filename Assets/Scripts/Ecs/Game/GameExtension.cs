@@ -40,6 +40,7 @@ namespace Ecs.Game
 			entity.AddEcsGamePosition(position);
 			entity.AddEcsGameDesiredDirectional(Vector2.zero);
 			entity.isEcsGameFlagsWeaponInstantiated = true;
+			entity.isEcsItemComponentsWeapone = true;
 			return entity;
 		}
 	}

@@ -8,18 +8,18 @@
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    static readonly Ecs.Game.Flags.ItemComponent ecsGameFlagsItemComponent = new Ecs.Game.Flags.ItemComponent();
+    static readonly Ecs.Item.Components.WeaponeComponent ecsItemComponentsWeaponeComponent = new Ecs.Item.Components.WeaponeComponent();
 
-    public bool isEcsGameFlagsItem {
-        get { return HasComponent(GameComponentsLookup.EcsGameFlagsItem); }
+    public bool isEcsItemComponentsWeapone {
+        get { return HasComponent(GameComponentsLookup.EcsItemComponentsWeapone); }
         set {
-            if (value != isEcsGameFlagsItem) {
-                var index = GameComponentsLookup.EcsGameFlagsItem;
+            if (value != isEcsItemComponentsWeapone) {
+                var index = GameComponentsLookup.EcsItemComponentsWeapone;
                 if (value) {
                     var componentPool = GetComponentPool(index);
                     var component = componentPool.Count > 0
                             ? componentPool.Pop()
-                            : ecsGameFlagsItemComponent;
+                            : ecsItemComponentsWeaponeComponent;
 
                     AddComponent(index, component);
                 } else {
@@ -40,17 +40,17 @@ public partial class GameEntity {
 //------------------------------------------------------------------------------
 public sealed partial class GameMatcher {
 
-    static Entitas.IMatcher<GameEntity> _matcherEcsGameFlagsItem;
+    static Entitas.IMatcher<GameEntity> _matcherEcsItemComponentsWeapone;
 
-    public static Entitas.IMatcher<GameEntity> EcsGameFlagsItem {
+    public static Entitas.IMatcher<GameEntity> EcsItemComponentsWeapone {
         get {
-            if (_matcherEcsGameFlagsItem == null) {
-                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.EcsGameFlagsItem);
+            if (_matcherEcsItemComponentsWeapone == null) {
+                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.EcsItemComponentsWeapone);
                 matcher.componentNames = GameComponentsLookup.componentNames;
-                _matcherEcsGameFlagsItem = matcher;
+                _matcherEcsItemComponentsWeapone = matcher;
             }
 
-            return _matcherEcsGameFlagsItem;
+            return _matcherEcsItemComponentsWeapone;
         }
     }
 }

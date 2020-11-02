@@ -1,5 +1,4 @@
-﻿using DB.Units;
-using DB.Weapons;
+﻿using DB.Weapons;
 using DB.Weapons.Prefabs;
 using DB.Weapons.Prefabs.Impls;
 using Ecs.View;

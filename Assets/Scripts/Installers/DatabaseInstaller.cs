@@ -8,6 +8,10 @@ using DB.Units.EnemyUnit.Prefabs;
 using DB.Units.EnemyUnit.Prefabs.Impls;
 using DB.Units.Prefabs;
 using DB.Units.Prefabs.Impls;
+using DB.Weapons.Characteristics;
+using DB.Weapons.Characteristics.Impls;
+using DB.Weapons.Prefabs;
+using DB.Weapons.Prefabs.Impls;
 using UnityEngine;
 using Zenject;
 
@@ -27,6 +31,11 @@ namespace Installers
 		//Ai
 		[SerializeField] private AiTaskDatabase _aiTaskDatabase;
 
+		//Weapones
+		[SerializeField] private WeaponCharacteristicsDatabase _weaponeCharacteristicDatabase;
+		[SerializeField] private WeaponPrefabDatabase _weaponePrefabDatabase;
+
+
 		public override void InstallBindings()
 		{
 			//Units
@@ -36,9 +45,13 @@ namespace Installers
 			//Enemy
 			Container.Bind<IEnemyCharacteristicsDatabase>().FromInstance(_enemyCharacteristicsDatabase).AsSingle();
 			Container.Bind<IEnemyPrefabDatabase>().FromInstance(_enemyPrefabDatabase).AsSingle();
-			
+
 			//Ai
 			Container.Bind<IAiTaskDatabase>().FromInstance(_aiTaskDatabase).AsSingle();
+
+			//Weapones
+			Container.Bind<IWeaponPrefabDatabase>().FromInstance(_weaponePrefabDatabase).AsSingle();
+			Container.Bind<IWeaponCharacteristicsDatabase>().FromInstance(_weaponeCharacteristicDatabase).AsSingle();
 		}
 	}
 }

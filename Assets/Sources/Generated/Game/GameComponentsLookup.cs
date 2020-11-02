@@ -38,18 +38,19 @@ public static class GameComponentsLookup {
     public const int EcsGameWeaponsDamage = 27;
     public const int EcsGameWeaponsFiringFrequency = 28;
     public const int EcsGameWeaponsShells = 29;
-    public const int EcsItemComponentsWeaponType = 30;
-    public const int EcsCommonComponentsNameListener = 31;
-    public const int EcsGameDesiredDirectionalListener = 32;
-    public const int EcsGameMovementTypeListener = 33;
-    public const int EcsGameObjectTypeListener = 34;
-    public const int EcsGamePositionListener = 35;
-    public const int EcsGameVelocityListener = 36;
-    public const int EcsItemComponentsWeaponTypeListener = 37;
-    public const int Enemy = 38;
-    public const int GameEcsCommonComponentsDestroyedListener = 39;
+    public const int EcsItemComponentsWeapone = 30;
+    public const int EcsItemComponentsWeaponType = 31;
+    public const int EcsCommonComponentsNameListener = 32;
+    public const int EcsGameDesiredDirectionalListener = 33;
+    public const int EcsGameMovementTypeListener = 34;
+    public const int EcsGameObjectTypeListener = 35;
+    public const int EcsGamePositionListener = 36;
+    public const int EcsGameVelocityListener = 37;
+    public const int EcsItemComponentsWeaponTypeListener = 38;
+    public const int Enemy = 39;
+    public const int GameEcsCommonComponentsDestroyedListener = 40;
 
-    public const int TotalComponents = 40;
+    public const int TotalComponents = 41;
 
     public static readonly string[] componentNames = {
         "EcsAiBehaviourTree",
@@ -82,6 +83,7 @@ public static class GameComponentsLookup {
         "EcsGameWeaponsDamage",
         "EcsGameWeaponsFiringFrequency",
         "EcsGameWeaponsShells",
+        "EcsItemComponentsWeapone",
         "EcsItemComponentsWeaponType",
         "EcsCommonComponentsNameListener",
         "EcsGameDesiredDirectionalListener",
@@ -125,6 +127,7 @@ public static class GameComponentsLookup {
         typeof(Ecs.Game.Weapons.DamageComponent),
         typeof(Ecs.Game.Weapons.FiringFrequencyComponent),
         typeof(Ecs.Game.Weapons.ShellsComponent),
+        typeof(Ecs.Item.Components.WeaponeComponent),
         typeof(Ecs.Item.Components.WeaponTypeComponent),
         typeof(EcsCommonComponentsNameListenerComponent),
         typeof(EcsGameDesiredDirectionalListenerComponent),
