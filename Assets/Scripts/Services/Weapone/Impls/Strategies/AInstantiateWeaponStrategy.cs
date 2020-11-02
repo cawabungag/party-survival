@@ -26,7 +26,6 @@ namespace Services.Weapone.Impls.Strategies
         
         public virtual ILinkable Create(GameEntity entity)
         {
-            Debug.Log("WeaponInstantiated");
             EWeaponType weaponType = entity.ecsItemComponentsWeaponType.Value;
             WeaponPrefabVo weapon = _weaponDatabase.GetWeaponPrefab(weaponType);
             GameObjectView view = _diContainer.InstantiatePrefabForComponent<GameObjectView>(weapon.Prefab, entity.ecsGamePosition.value,

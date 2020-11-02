@@ -23,8 +23,7 @@ namespace Services.Weapone.Impls.Strategies
 		public override bool CanInstantiate(GameEntity entity) => entity.isEcsItemComponentsWeapone; //Проверить
 
 		public override ILinkable Create(GameEntity entity)
-		{
-			Debug.Log("insr");
+		{ 
 			ILinkable linkable = base.Create(entity);
 			EWeaponType weaponType = entity.ecsItemComponentsWeaponType.Value;
 			WeaponCharacteristicsVo setting = _weaponCharacteristicsDatabase.GetWeaponCharacteristicsVo(weaponType);
