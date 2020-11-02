@@ -6,6 +6,8 @@ using Game.Ai.Tasks.Impls.Enemy;
 using Services.Items.Impls;
 using Services.Unit.Impls;
 using Services.Unit.Impls.Strategies;
+using Services.Weapone.Impls;
+using Services.Weapone.Impls.Strategies;
 using UI.Game.Windows;
 using UnityEngine;
 using Zenject;
@@ -50,11 +52,13 @@ namespace Installers
 		private void BindStrategies()
 		{
 			Container.BindInterfacesTo<InstantiateUnitStrategy>().AsSingle();
+			Container.BindInterfacesTo<InstantiateWeaponStrategy>().AsSingle();
 		}
 
 		private void BindFactories()
 		{
 			Container.BindInterfacesTo<UnitFactory>().AsSingle();
+			Container.BindInterfacesTo<WeaponFactory>().AsSingle();
 
 			//Ai task builder
 			Container.BindInterfacesTo<WanderActionBuilder>().AsSingle();

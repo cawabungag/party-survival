@@ -14,7 +14,7 @@ namespace Ecs.Game.System
 
 		public BehaviourTreeTickSystem(GameContext game)
 		{
-			_group = game.GetGroup(GameMatcher.AllOf(GameMatcher.EcsGameComponentsAiBehaviourTree)
+			_group = game.GetGroup(GameMatcher.AllOf(GameMatcher.EcsAiBehaviourTree)
 				.NoneOf(GameMatcher.EcsGameFlagsDestroyed));
 		}
 
@@ -25,7 +25,7 @@ namespace Ecs.Game.System
 
 			foreach (var entity in buffer)
 			{
-				entity.ecsGameComponentsAiBehaviourTree.Value.Tick();
+				entity.ecsAiBehaviourTree.Value.Tick();
 			}
 
 			GameEntitiesListPool.Despawn(buffer);

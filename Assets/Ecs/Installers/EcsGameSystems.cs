@@ -21,6 +21,9 @@ namespace Entitas.Generated.Installer {
 			//  0100
 			container.BindInterfacesAndSelfTo<InstantiateSystem>().AsSingle();	// 0100 
 
+			//  0130
+			container.BindInterfacesAndSelfTo<InstantiateWeaponSystem>().AsSingle();	// 0130 
+
 			//  0300
 			container.BindInterfacesAndSelfTo<ApplyVelocityUnitSystem>().AsSingle();	// 0300 
 

@@ -33,12 +33,12 @@ namespace Services.Unit.Impls.Strategies
 			if (entity.isEnemy)
 			{
 				IBehaviorTree behaviorTree = _behaviourTreeFactory.Create(entity);
-				entity.AddEcsGameComponentsAiBehaviourTree(behaviorTree);
+				entity.AddEcsAiBehaviourTree(behaviorTree);
 				entity.AddEcsGameMoveEndTime(0);
 			}
 			EObjectType unitType = entity.ecsGameObjectType.Value;
 			UnitPrefabVo unit = _unitDatabase.GetUnitPrefab(unitType);
-			UnitObjectView view = _diContainer.InstantiatePrefabForComponent<UnitObjectView>(unit.Prefab, entity.ecsGamePosition.value,
+				UnitObjectView view = _diContainer.InstantiatePrefabForComponent<UnitObjectView>(unit.Prefab, entity.ecsGamePosition.value,
 				Quaternion.identity, null);
 			return view;
 		}

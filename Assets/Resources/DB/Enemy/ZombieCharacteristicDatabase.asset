@@ -17,3 +17,11 @@ MonoBehaviour:
     _health: 100
     _speed: 5
     _rangeView: 100
+  - _unitId: 2
+    _health: 100
+    _speed: 5
+    _rangeView: 100
+  - _unitId: 2
+    _health: 100
+    _speed: 5
+    _rangeView: 100

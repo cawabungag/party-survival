@@ -2,13 +2,12 @@
 {
     public enum EWeaponType
     {
-        AK47,          //Rifles
+        AK47,
         M4A1,
-        SkorpionVz,    //Personal defence weapons
+        SkorpionVz,
         UMP45,
-        DesertEagle,   // Heavy pistols
+        DesertEagle,
         Magnim500,
-        GlockG22       //Light pistol
-
+        GlockG22
     }
 }

@@ -16,5 +16,6 @@ public sealed class GameEventSystems : Feature {
         Add(new EcsGameObjectTypeEventSystem(contexts)); // priority: 0
         Add(new EcsGamePositionEventSystem(contexts)); // priority: 0
         Add(new EcsGameVelocityEventSystem(contexts)); // priority: 0
+        Add(new EcsItemComponentsWeaponTypeEventSystem(contexts)); // priority: 0
     }
 }

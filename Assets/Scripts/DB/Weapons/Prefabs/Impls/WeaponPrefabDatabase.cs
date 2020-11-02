@@ -9,7 +9,7 @@ namespace DB.Weapons.Prefabs.Impls
     {
         [SerializeField] private WeaponPrefabVo[] _weaponPrefabVos; 
     
-        public WeaponPrefabVo GetWeaponPrefabVoPrefab(EWeaponType weaponId)
+        public WeaponPrefabVo GetWeaponPrefab(EWeaponType weaponId)
         {
             for (int i = 0; i < _weaponPrefabVos.Length; i++)
             {
@@ -21,8 +21,8 @@ namespace DB.Weapons.Prefabs.Impls
             }
         
             throw new ArgumentException(
-                $"[{nameof(WeaponPrefabDatabase)}] No WeaponPrefabCVo for WeaponPrefabId:{weaponId}");
+                $"[{nameof(WeaponPrefabDatabase)}] No WeaponPrefabVo for WeaponPrefabId:{weaponId}");
         }
-        
+      
     }
 }

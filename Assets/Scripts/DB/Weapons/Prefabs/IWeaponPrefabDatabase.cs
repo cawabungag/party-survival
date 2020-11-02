@@ -5,6 +5,6 @@ namespace DB.Weapons.Prefabs
 {
     public interface IWeaponPrefabDatabase
     {
-        WeaponPrefabVo GetWeaponPrefabVoPrefab(EWeaponType weaponId);
+        WeaponPrefabVo GetWeaponPrefab(EWeaponType weaponId);
     }
 }
