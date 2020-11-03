@@ -3,6 +3,7 @@ using Ecs.Game.Camera;
 using Game.Ai.Impls;
 using Game.Ai.Tasks.Impls;
 using Game.Ai.Tasks.Impls.Enemy;
+using Game.Ai.Tasks.Impls.PlayerUnit;
 using Services.Items.Impls;
 using Services.Unit.Impls;
 using Services.Unit.Impls.Strategies;
@@ -65,6 +66,7 @@ namespace Installers
 			Container.BindInterfacesTo<FindClosestUnitsBuilder>().AsSingle();
 			Container.BindInterfacesTo<GoToTargetActionBuilder>().AsSingle();
 			Container.BindInterfacesTo<AttackActionBuilder>().AsSingle();
+			Container.BindInterfacesTo<ItemDetectionBuilder>().AsSingle();
 		}
 	}
 }
