@@ -37,7 +37,7 @@ namespace Game.Ai.Tasks.Impls.PlayerUnit
                     float rangeView = entity.ecsGameUnitsRangeView.Value;
                     float rangeViewSqr = rangeView * rangeView;
                     GameEntity closestItem = null;
-                    float closestFoodSqrDistance = int.MaxValue;
+                    float closestItemSqrDistance = int.MaxValue;
 
                     foreach (var item in buffer)
                     {
@@ -47,10 +47,10 @@ namespace Game.Ai.Tasks.Impls.PlayerUnit
                         Vector2 itemPosition = item.ecsGamePosition.value;
                         Vector2 itemDistance = itemPosition - position;
                         float unitDistanceSqrMagnitude = itemDistance.sqrMagnitude;
-                        if (unitDistanceSqrMagnitude > rangeViewSqr || closestFoodSqrDistance < unitDistanceSqrMagnitude)
+                        if (unitDistanceSqrMagnitude > rangeViewSqr || closestItemSqrDistance < unitDistanceSqrMagnitude)
                             continue;
 
-                        closestFoodSqrDistance = unitDistanceSqrMagnitude;
+                        closestItemSqrDistance = unitDistanceSqrMagnitude;
                         closestItem = item;
                     }
 
