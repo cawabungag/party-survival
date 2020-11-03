@@ -6,5 +6,6 @@ namespace Game.Ai.Tasks
 		public const string FIND_UNITS = "find_units";
 		public const string GO_TO_TARGET = "go_to_target";
 		public const string ATTACK = "attack";
+		public const string FIND_ITEM = "find_item";
 	}
 }

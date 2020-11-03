@@ -3,7 +3,6 @@ using DB.Weapons.Characteristics;
 using DB.Weapons.Characteristics.Impls;
 using DB.Weapons.Prefabs;
 using Ecs.View;
-using UnityEngine;
 using Zenject;
 
 namespace Services.Weapone.Impls.Strategies
@@ -20,7 +19,7 @@ namespace Services.Weapone.Impls.Strategies
 			_weaponCharacteristicsDatabase = weaponCharacteristicsDatabase;
 		}
 
-		public override bool CanInstantiate(GameEntity entity) => entity.isEcsItemComponentsWeapone; //Проверить
+		public override bool CanInstantiate(GameEntity entity) => entity.isEcsItemComponentsWeapone;
 
 		public override ILinkable Create(GameEntity entity)
 		{ 
