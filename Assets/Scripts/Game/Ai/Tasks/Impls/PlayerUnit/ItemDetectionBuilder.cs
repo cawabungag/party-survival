@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 using CleverCrow.Fluid.BTs.Trees;
+using DB.Units;
+using DB.Weapons;
 using Entitas;
 using UnityEngine;
 using Zenject;
@@ -23,10 +25,11 @@ namespace Game.Ai.Tasks.Impls.PlayerUnit
             public override void Fill(BehaviorTreeBuilder builder, GameEntity entity)
                 => builder.Condition(Name, () =>
                 {
-                    if (!entity.hasEcsGameUnitsRangeView || !entity.hasEcsGamePosition)
+                    if (!entity.hasEcsGameUnitsPickingDistance || !entity.hasEcsGamePosition)
                         return false;
+                    
                     IGroup<GameEntity> group = _game.GetGroup(
-                        GameMatcher.AllOf(GameMatcher.EcsItemComponentsWeapone)
+                        GameMatcher.AllOf(GameMatcher.EcsGameUnitsPickingDistance)
                             .NoneOf(GameMatcher.EcsGameFlagsDestroyed));
                     List<GameEntity> buffer = GameEntitiesListPool.Spawn();
                     group.GetEntities(buffer);
@@ -34,10 +37,10 @@ namespace Game.Ai.Tasks.Impls.PlayerUnit
                         return false;
 
                     Vector2 position = entity.ecsGamePosition.value;
-                    float rangeView = entity.ecsGameUnitsRangeView.Value;
-                    float rangeViewSqr = rangeView * rangeView;
+                    float pickingDistance = entity.ecsGameUnitsPickingDistance.Value;
+                    float rangeViewSqr = pickingDistance * pickingDistance;
                     GameEntity closestItem = null;
-                    float closestFoodSqrDistance = int.MaxValue;
+                    float closestItemSqrDistance = int.MaxValue;
 
                     foreach (var item in buffer)
                     {
@@ -46,11 +49,11 @@ namespace Game.Ai.Tasks.Impls.PlayerUnit
 
                         Vector2 itemPosition = item.ecsGamePosition.value;
                         Vector2 itemDistance = itemPosition - position;
-                        float unitDistanceSqrMagnitude = itemDistance.sqrMagnitude;
-                        if (unitDistanceSqrMagnitude > rangeViewSqr || closestFoodSqrDistance < unitDistanceSqrMagnitude)
+                        float itemDistanceSqrMagnitude = itemDistance.sqrMagnitude;
+                        if (itemDistanceSqrMagnitude > rangeViewSqr || closestItemSqrDistance < itemDistanceSqrMagnitude)
                             continue;
 
-                        closestFoodSqrDistance = unitDistanceSqrMagnitude;
+                        closestItemSqrDistance = itemDistanceSqrMagnitude;
                         closestItem = item;
                     }
 

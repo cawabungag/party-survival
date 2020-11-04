@@ -24,13 +24,13 @@ public class GameWindowManager : IInitializable
 		m_gameContext.CreateUnit(EObjectType.Unit, new Vector3(1.5f, 0, 1.5f));
 		m_gameContext.CreateUnit(EObjectType.Unit, new Vector3(-1.5f, 0, -1.5f));
 		m_gameContext.CreateEnemy(EObjectType.ZombieUnit, Vector3.zero);
-		m_gameContext.CreateWeapon(EWeaponType.AK47, new Vector3(-14, -1, 0));
-		m_gameContext.CreateWeapon(EWeaponType.M4A1, new Vector3(-12, -1, 0));
+		m_gameContext.CreateWeapon(EWeaponType.AK47, new Vector3(-6,-1,0));
+	/*	m_gameContext.CreateWeapon(EWeaponType.M4A1, new Vector3(-12, -1, 0));
 		m_gameContext.CreateWeapon(EWeaponType.UMP45, new Vector3(-10, -1, 0));
 		m_gameContext.CreateWeapon(EWeaponType.SkorpionVz, new Vector3(-8, -1, 0));
 		m_gameContext.CreateWeapon(EWeaponType.DesertEagle, new Vector3(-6, -1, 0));
 		m_gameContext.CreateWeapon(EWeaponType.Magnim500, new Vector3(-4, -1, 0));
-		m_gameContext.CreateWeapon(EWeaponType.GlockG22,new Vector3(-2, -1, 0));
+		m_gameContext.CreateWeapon(EWeaponType.GlockG22,new Vector3(-2, -1, 0));*/
 
 	}
 }

@@ -4,6 +4,7 @@ using Entitas;
 using InstallerGenerator.Attributes;
 using InstallerGenerator.Enums;
 using Services.Weapone;
+using UnityEngine;
 
 namespace Ecs.Game.System
 {
@@ -35,6 +36,7 @@ namespace Ecs.Game.System
                 var linkable = _weaponFactory.Create(entity);
                 linkable.Link(entity, _game);
                 entity.AddEcsCommonComponentsLink(linkable);
+                Debug.Log("link");
             }
         }
     }

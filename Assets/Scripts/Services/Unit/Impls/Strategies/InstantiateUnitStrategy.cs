@@ -40,6 +40,7 @@ namespace Services.Unit.Impls.Strategies
 			entity.AddEcsGameUnitsHealth(setting.Health);
 			entity.AddEcsGameUnitsSpeed(setting.Speed);
 			entity.AddEcsGameUnitsRangeView(setting.RangeView);
+			entity.AddEcsGameUnitsPickingDistance(setting.PickingDistance);
 		}
 	}
 }
