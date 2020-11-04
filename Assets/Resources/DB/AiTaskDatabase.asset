@@ -19,3 +19,6 @@ MonoBehaviour:
     - find_units
     - go_to_target
     - attack
+  - objectType: 0
+    taskNames:
+    - find_item

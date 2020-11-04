@@ -2,6 +2,7 @@
 using DB.Weapons.Characteristics;
 using DB.Weapons.Characteristics.Impls;
 using DB.Weapons.Prefabs;
+using Ecs.Core;
 using Ecs.View;
 using Zenject;
 
@@ -26,7 +27,6 @@ namespace Services.Weapone.Impls.Strategies
 			ILinkable linkable = base.Create(entity);
 			EWeaponType weaponType = entity.ecsItemComponentsWeaponType.Value;
 			WeaponCharacteristicsVo setting = _weaponCharacteristicsDatabase.GetWeaponCharacteristicsVo(weaponType);
-
 			InitializeNonSerializableParameters(entity, setting);
 			return linkable;
 		}
