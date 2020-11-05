@@ -1,7 +1,5 @@
 ﻿using System.Collections.Generic;
 using CleverCrow.Fluid.BTs.Trees;
-using DB.Units;
-using DB.Weapons;
 using Entitas;
 using UnityEngine;
 using Zenject;
@@ -10,9 +8,9 @@ namespace Game.Ai.Tasks.Impls.PlayerUnit
 {
     public class ItemDetectionBuilder : ABTreeBuilder
     {
-        private static readonly ListPool<GameEntity> GameEntitiesListPool = ListPool<GameEntity>.Instance;
+            private static readonly ListPool<GameEntity> GameEntitiesListPool = ListPool<GameEntity>.Instance;
             private readonly GameContext _game;
-
+            
             public override string Name => TaskNames.FIND_ITEM;
 
             public ItemDetectionBuilder(
@@ -27,9 +25,9 @@ namespace Game.Ai.Tasks.Impls.PlayerUnit
                 {
                     if (!entity.hasEcsGameUnitsPickingDistance || !entity.hasEcsGamePosition)
                         return false;
-                    
+
                     IGroup<GameEntity> group = _game.GetGroup(
-                        GameMatcher.AllOf(GameMatcher.EcsGameUnitsPickingDistance)
+                        GameMatcher.AllOf(GameMatcher.EcsItemComponentsWeapone)
                             .NoneOf(GameMatcher.EcsGameFlagsDestroyed));
                     List<GameEntity> buffer = GameEntitiesListPool.Spawn();
                     group.GetEntities(buffer);
@@ -52,17 +50,10 @@ namespace Game.Ai.Tasks.Impls.PlayerUnit
                         float itemDistanceSqrMagnitude = itemDistance.sqrMagnitude;
                         if (itemDistanceSqrMagnitude > rangeViewSqr || closestItemSqrDistance < itemDistanceSqrMagnitude)
                             continue;
-
-                        closestItemSqrDistance = itemDistanceSqrMagnitude;
-                        closestItem = item;
+                        entity.isEcsGameFlagsItemEquipped = true;
+                        Debug.Log("ItemEquipped");
                     }
-
-                    if (closestItem != null)
-                    {
-                        entity.ReplaceEcsGameTarget(closestItem.ecsCommonComponentsUid.Value);
-                        return true;
-                    }
-
+                    
                     return false;
                 });
         
