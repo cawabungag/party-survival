@@ -54,7 +54,7 @@ namespace Game.Ai.Tasks.Impls.PlayerUnit
                         Debug.Log("ItemEquipped");
                     }
                     
-                    return false;
+                    return false; 
                 });
         
     }
