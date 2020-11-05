@@ -30,12 +30,10 @@ namespace Services.Unit.Impls.Strategies
 
 		public virtual ILinkable Create(GameEntity entity)
 		{
-			if (entity.isEnemy)
-			{
-				IBehaviorTree behaviorTree = _behaviourTreeFactory.Create(entity);
-				entity.AddEcsAiBehaviourTree(behaviorTree);
-				entity.AddEcsGameMoveEndTime(0);
-			}
+			IBehaviorTree behaviorTree = _behaviourTreeFactory.Create(entity);
+			entity.AddEcsAiBehaviourTree(behaviorTree);
+			entity.AddEcsGameMoveEndTime(0);
+			
 			EObjectType unitType = entity.ecsGameObjectType.Value;
 			UnitPrefabVo unit = _unitDatabase.GetUnitPrefab(unitType);
 				UnitObjectView view = _diContainer.InstantiatePrefabForComponent<UnitObjectView>(unit.Prefab, entity.ecsGamePosition.value,
