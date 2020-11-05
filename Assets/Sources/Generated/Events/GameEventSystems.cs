@@ -12,12 +12,10 @@ public sealed class GameEventSystems : Feature {
         Add(new GameEcsCommonComponentsDestroyedEventSystem(contexts)); // priority: 0
         Add(new EcsCommonComponentsNameEventSystem(contexts)); // priority: 0
         Add(new EcsGameDesiredDirectionalEventSystem(contexts)); // priority: 0
-        Add(new EcsGameFlagsItemEquippedEventSystem(contexts)); // priority: 0
         Add(new EcsGameMovementTypeEventSystem(contexts)); // priority: 0
         Add(new EcsGameObjectTypeEventSystem(contexts)); // priority: 0
         Add(new EcsGamePositionEventSystem(contexts)); // priority: 0
         Add(new EcsGameUnitsPickingDistanceEventSystem(contexts)); // priority: 0
         Add(new EcsGameVelocityEventSystem(contexts)); // priority: 0
-        Add(new EcsItemComponentsWeaponTypeEventSystem(contexts)); // priority: 0
     }
 }

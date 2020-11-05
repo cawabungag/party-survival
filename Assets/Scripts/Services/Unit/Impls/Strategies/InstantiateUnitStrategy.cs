@@ -23,7 +23,7 @@ namespace Services.Unit.Impls.Strategies
 			_unitCharacteristicDatabase = unitCharacteristicDatabase;
 		}
 
-		public override bool CanInstantiate(GameEntity entity) => entity.isEcsGameFlagsUnit || entity.isEnemy;
+		public override bool CanInstantiate(GameEntity entity) => entity.ecsGameObjectType.Value == EObjectType.Unit || entity.ecsGameObjectType.Value == EObjectType.ZombieUnit;
 
 		public override ILinkable Create(GameEntity entity)
 		{

@@ -18,7 +18,7 @@ namespace Game.Ai.Tasks.Impls
 		public override void Fill(BehaviorTreeBuilder builder, GameEntity entity)
 			=> builder.Do(Name, () =>
 			{
-				if (!entity.hasEcsGameWeaponsDamage || !entity.hasEcsGameAttackTarget)
+				if (!entity.hasEcsItemWeaponsDamage || !entity.hasEcsGameAttackTarget)
 					return TaskStatus.Failure;
 
 				Uid targetUid = entity.ecsGameAttackTarget.Value;
@@ -26,7 +26,7 @@ namespace Game.Ai.Tasks.Impls
 				if (targetEntity == null || !targetEntity.hasEcsGameUnitsHealth)
 					return TaskStatus.Failure;
 
-				float damage = entity.ecsGameWeaponsDamage.Value;
+				float damage = entity.ecsItemWeaponsDamage.Value;
 				float targetEntityHealth = targetEntity.ecsGameUnitsHealth.Value;
 				float newTargetEntityHealth = targetEntityHealth - damage;
 				targetEntity.ReplaceEcsGameUnitsHealth((int) newTargetEntityHealth);

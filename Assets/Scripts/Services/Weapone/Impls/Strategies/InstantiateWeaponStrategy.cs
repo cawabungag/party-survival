@@ -19,22 +19,22 @@ namespace Services.Weapone.Impls.Strategies
 			_weaponCharacteristicsDatabase = weaponCharacteristicsDatabase;
 		}
 
-		public override bool CanInstantiate(GameEntity entity) => entity.isEcsItemComponentsWeapone;
+		public override bool CanInstantiate(ItemEntity entity) => entity.hasEcsItemComponentsWeaponeType;
 
-		public override ILinkable Create(GameEntity entity)
-		{ 
+		public override ILinkable Create(ItemEntity entity)
+		{
 			ILinkable linkable = base.Create(entity);
-			EWeaponType weaponType = entity.ecsItemComponentsWeaponType.Value;
+			EWeaponType weaponType = entity.ecsItemComponentsWeaponeType.Value;
 			WeaponCharacteristicsVo setting = _weaponCharacteristicsDatabase.GetWeaponCharacteristicsVo(weaponType);
 			InitializeNonSerializableParameters(entity, setting);
 			return linkable;
 		}
 
-		private void InitializeNonSerializableParameters(GameEntity entity, WeaponCharacteristicsVo setting)
+		private void InitializeNonSerializableParameters(ItemEntity entity, WeaponCharacteristicsVo setting)
 		{
-			entity.AddEcsGameWeaponsDamage(setting.Damage);
-			entity.AddEcsGameWeaponsShells(setting.Shells);
-			entity.AddEcsGameWeaponsFiringFrequency(setting.FiringFrequency);
+			entity.AddEcsItemWeaponsDamage(setting.Damage);
+			entity.AddEcsItemWeaponsShells(setting.Shells);
+			entity.AddEcsItemWeaponsFiringFrequency(setting.FiringFrequency);
 		}
 	}
 }

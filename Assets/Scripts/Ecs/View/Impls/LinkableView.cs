@@ -4,11 +4,11 @@ using UnityEngine;
 
 namespace Ecs.View.Impls
 {
-	public abstract class LinkableView<TEntity> : LinkableView where TEntity : IEntity
+	public abstract class LinkableView<TEntity> : LinkableView where TEntity : class, IEntity
 	{
 		private protected TEntity Entity => (TEntity) _entity;
 
-		public sealed override void Listen(IEntity entity) => Listen((TEntity) entity);
+		public sealed override void Listen(IEntity entity) => Listen(entity as TEntity);
 
 		public sealed override void Unlisten(IEntity entity)
 		{
@@ -68,7 +68,7 @@ namespace Ecs.View.Impls
 		}
 
 		public abstract void Clear();
-		
+
 		private void OnDestroy()
 		{
 			_destroyed = true;

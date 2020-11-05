@@ -10,5 +10,6 @@ public sealed class ItemEventSystems : Feature {
 
     public ItemEventSystems(Contexts contexts) {
         Add(new ItemEcsCommonComponentsDestroyedEventSystem(contexts)); // priority: 0
+        Add(new EcsItemComponentsPositionEventSystem(contexts)); // priority: 0
     }
 }

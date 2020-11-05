@@ -5,10 +5,10 @@ namespace Ecs.View.Impls
 {
 	public class AnimationKeys
 	{
-		public static readonly int IdleAnimation = Animator.StringToHash("Idle");
-		public static readonly int WalkAnimation = Animator.StringToHash("Walk");
-		public static readonly int RunAnimation = Animator.StringToHash("Run");
-		public static readonly int DieAnimation = Animator.StringToHash("Die");
+		private static readonly int IdleAnimation = Animator.StringToHash("Idle");
+		private static readonly int WalkAnimation = Animator.StringToHash("Walk");
+		private static readonly int RunAnimation = Animator.StringToHash("Run");
+		private static readonly int DieAnimation = Animator.StringToHash("Die");
 
 		public static int GetAnimation(EMovementType movementType)
 		{

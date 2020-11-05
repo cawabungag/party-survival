@@ -2,7 +2,7 @@ using Entitas;
 
 namespace Ecs.Game.Flags
 {
-	[Game]
+	[Game, Item]
 	public class InstantiatedComponent : IComponent
 	{
 		public override string ToString()

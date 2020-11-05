@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
-using Ecs.Game.Camera;
+using DB.Units;
 using Entitas;
+using Game.Camera;
 using InstallerGenerator.Attributes;
 using InstallerGenerator.Enums;
 using UnityEngine;
@@ -13,15 +14,13 @@ namespace Ecs.Game.System
 	{
 		private static readonly ListPool<GameEntity> GameEntitiesListPool = ListPool<GameEntity>.Instance;
 		private readonly IGroup<GameEntity> _group;
-		private readonly GameContext _gameContext;
 		private readonly ICameraView _mainCamera;
 		private const float CAMERA_DIFF = 10f;
 
 		public CameraMoveSystem(GameContext gameContext, ICameraView camera)
 		{
 			_mainCamera = camera;
-			_gameContext = gameContext;
-			_group = gameContext.GetGroup(GameMatcher.AllOf(GameMatcher.EcsGameFlagsUnit)
+			_group = gameContext.GetGroup(GameMatcher.AllOf(GameMatcher.EcsGameFlagsInstantiated)
 				.NoneOf(GameMatcher.EcsGameFlagsDestroyed));
 		}
 
@@ -32,11 +31,11 @@ namespace Ecs.Game.System
 			for (int i = 0; i < buffer.Count; i++)
 			{
 				GameEntity entity = buffer[i];
-				if (!entity.hasEcsGamePosition || !entity.isEcsGameFlagsUnit
+				if (!entity.hasEcsGamePosition || entity.ecsGameObjectType.Value != EObjectType.Unit
 				) continue;
 				{
 					Vector2 unitPosition = entity.ecsGamePosition.value;
-					UnityEngine.Camera camera = _mainCamera.GetCamera();
+					Camera camera = _mainCamera.GetCamera();
 					Transform transform = camera.transform;
 					Vector3 cameraPosition = transform.position;
 					cameraPosition.x = unitPosition.x;

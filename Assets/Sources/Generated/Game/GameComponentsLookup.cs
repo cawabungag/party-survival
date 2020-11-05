@@ -20,42 +20,32 @@ public static class GameComponentsLookup {
     public const int EcsGameDirection = 9;
     public const int EcsGameFlagsDestroyed = 10;
     public const int EcsGameFlagsInstantiated = 11;
-    public const int EcsGameFlagsItemEquipped = 12;
-    public const int EcsGameFlagsUnit = 13;
-    public const int EcsGameFlagsWeaponInstantiated = 14;
-    public const int EcsGameInputDirectional = 15;
-    public const int EcsGameInputHorizontal = 16;
-    public const int EcsGameInputVertical = 17;
-    public const int EcsGameMoveEndTime = 18;
-    public const int EcsGameMovementType = 19;
-    public const int EcsGameObjectType = 20;
-    public const int EcsGamePosition = 21;
-    public const int EcsGameTarget = 22;
-    public const int EcsGameUnitsHealth = 23;
-    public const int EcsGameUnitsMaxHealth = 24;
-    public const int EcsGameUnitsPickingDistance = 25;
-    public const int EcsGameUnitsRangeView = 26;
-    public const int EcsGameUnitsSpeed = 27;
-    public const int EcsGameUnitsTransform = 28;
-    public const int EcsGameVelocity = 29;
-    public const int EcsGameWeaponsDamage = 30;
-    public const int EcsGameWeaponsFiringFrequency = 31;
-    public const int EcsGameWeaponsShells = 32;
-    public const int EcsItemComponentsWeapone = 33;
-    public const int EcsItemComponentsWeaponType = 34;
-    public const int EcsCommonComponentsNameListener = 35;
-    public const int EcsGameDesiredDirectionalListener = 36;
-    public const int EcsGameFlagsItemEquippedListener = 37;
-    public const int EcsGameMovementTypeListener = 38;
-    public const int EcsGameObjectTypeListener = 39;
-    public const int EcsGamePositionListener = 40;
-    public const int EcsGameUnitsPickingDistanceListener = 41;
-    public const int EcsGameVelocityListener = 42;
-    public const int EcsItemComponentsWeaponTypeListener = 43;
-    public const int Enemy = 44;
-    public const int GameEcsCommonComponentsDestroyedListener = 45;
+    public const int EcsGameInputDirectional = 12;
+    public const int EcsGameInputHorizontal = 13;
+    public const int EcsGameInputVertical = 14;
+    public const int EcsGameMoveEndTime = 15;
+    public const int EcsGameMovementType = 16;
+    public const int EcsGameObjectType = 17;
+    public const int EcsGamePosition = 18;
+    public const int EcsGameTarget = 19;
+    public const int EcsGameUnitsHealth = 20;
+    public const int EcsGameUnitsMaxHealth = 21;
+    public const int EcsGameUnitsPickingDistance = 22;
+    public const int EcsGameUnitsRangeView = 23;
+    public const int EcsGameUnitsSpeed = 24;
+    public const int EcsGameUnitsTransform = 25;
+    public const int EcsGameVelocity = 26;
+    public const int EcsItemWeaponsDamage = 27;
+    public const int EcsCommonComponentsNameListener = 28;
+    public const int EcsGameDesiredDirectionalListener = 29;
+    public const int EcsGameMovementTypeListener = 30;
+    public const int EcsGameObjectTypeListener = 31;
+    public const int EcsGamePositionListener = 32;
+    public const int EcsGameUnitsPickingDistanceListener = 33;
+    public const int EcsGameVelocityListener = 34;
+    public const int GameEcsCommonComponentsDestroyedListener = 35;
 
-    public const int TotalComponents = 46;
+    public const int TotalComponents = 36;
 
     public static readonly string[] componentNames = {
         "EcsAiBehaviourTree",
@@ -70,9 +60,6 @@ public static class GameComponentsLookup {
         "EcsGameDirection",
         "EcsGameFlagsDestroyed",
         "EcsGameFlagsInstantiated",
-        "EcsGameFlagsItemEquipped",
-        "EcsGameFlagsUnit",
-        "EcsGameFlagsWeaponInstantiated",
         "EcsGameInputDirectional",
         "EcsGameInputHorizontal",
         "EcsGameInputVertical",
@@ -88,21 +75,14 @@ public static class GameComponentsLookup {
         "EcsGameUnitsSpeed",
         "EcsGameUnitsTransform",
         "EcsGameVelocity",
-        "EcsGameWeaponsDamage",
-        "EcsGameWeaponsFiringFrequency",
-        "EcsGameWeaponsShells",
-        "EcsItemComponentsWeapone",
-        "EcsItemComponentsWeaponType",
+        "EcsItemWeaponsDamage",
         "EcsCommonComponentsNameListener",
         "EcsGameDesiredDirectionalListener",
-        "EcsGameFlagsItemEquippedListener",
         "EcsGameMovementTypeListener",
         "EcsGameObjectTypeListener",
         "EcsGamePositionListener",
         "EcsGameUnitsPickingDistanceListener",
         "EcsGameVelocityListener",
-        "EcsItemComponentsWeaponTypeListener",
-        "Enemy",
         "GameEcsCommonComponentsDestroyedListener"
     };
 
@@ -119,9 +99,6 @@ public static class GameComponentsLookup {
         typeof(Ecs.Game.DirectionComponent),
         typeof(Ecs.Game.Flags.DestroyedComponent),
         typeof(Ecs.Game.Flags.InstantiatedComponent),
-        typeof(Ecs.Game.Flags.ItemEquippedComponent),
-        typeof(Ecs.Game.Flags.UnitComponent),
-        typeof(Ecs.Game.Flags.WeaponInstantiatedComponent),
         typeof(Ecs.Game.Input.DirectionalComponent),
         typeof(Ecs.Game.Input.HorizontalComponent),
         typeof(Ecs.Game.Input.VerticalComponent),
@@ -137,21 +114,14 @@ public static class GameComponentsLookup {
         typeof(Ecs.Game.Units.SpeedComponent),
         typeof(Ecs.Game.Units.TransformComponent),
         typeof(Ecs.Game.VelocityComponent),
-        typeof(Ecs.Game.Weapons.DamageComponent),
-        typeof(Ecs.Game.Weapons.FiringFrequencyComponent),
-        typeof(Ecs.Game.Weapons.ShellsComponent),
-        typeof(Ecs.Item.Components.WeaponeComponent),
-        typeof(Ecs.Item.Components.WeaponTypeComponent),
+        typeof(Ecs.Item.Weapons.DamageComponent),
         typeof(EcsCommonComponentsNameListenerComponent),
         typeof(EcsGameDesiredDirectionalListenerComponent),
-        typeof(EcsGameFlagsItemEquippedListenerComponent),
         typeof(EcsGameMovementTypeListenerComponent),
         typeof(EcsGameObjectTypeListenerComponent),
         typeof(EcsGamePositionListenerComponent),
         typeof(EcsGameUnitsPickingDistanceListenerComponent),
         typeof(EcsGameVelocityListenerComponent),
-        typeof(EcsItemComponentsWeaponTypeListenerComponent),
-        typeof(EnemyComponent),
         typeof(GameEcsCommonComponentsDestroyedListenerComponent)
     };
 }

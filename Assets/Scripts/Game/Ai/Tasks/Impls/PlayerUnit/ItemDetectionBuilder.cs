@@ -6,56 +6,52 @@ using Zenject;
 
 namespace Game.Ai.Tasks.Impls.PlayerUnit
 {
-    public class ItemDetectionBuilder : ABTreeBuilder
-    {
-            private static readonly ListPool<GameEntity> GameEntitiesListPool = ListPool<GameEntity>.Instance;
-            private readonly GameContext _game;
-            
-            public override string Name => TaskNames.FIND_ITEM;
+	public class ItemDetectionBuilder : ABTreeBuilder
+	{
+		private static readonly ListPool<ItemEntity> ItemEntitiesListPool = ListPool<ItemEntity>.Instance;
+		private readonly ItemContext _itemContext;
 
-            public ItemDetectionBuilder(
-                GameContext game
-            )
-            {
-                _game = game;
-            }
+		public override string Name => TaskNames.FIND_ITEM;
 
-            public override void Fill(BehaviorTreeBuilder builder, GameEntity entity)
-                => builder.Condition(Name, () =>
-                {
-                    if (!entity.hasEcsGameUnitsPickingDistance || !entity.hasEcsGamePosition)
-                        return false;
+		public ItemDetectionBuilder(
+			ItemContext itemContext
+		)
+		{
+			_itemContext = itemContext;
+		}
 
-                    IGroup<GameEntity> group = _game.GetGroup(
-                        GameMatcher.AllOf(GameMatcher.EcsItemComponentsWeapone)
-                            .NoneOf(GameMatcher.EcsGameFlagsDestroyed));
-                    List<GameEntity> buffer = GameEntitiesListPool.Spawn();
-                    group.GetEntities(buffer);
-                    if (buffer.Count == 0)
-                        return false;
+		public override void Fill(BehaviorTreeBuilder builder, GameEntity entity)
+			=> builder.Condition(Name, () =>
+			{
+				if (!entity.hasEcsGameUnitsPickingDistance || !entity.hasEcsGamePosition)
+					return false;
 
-                    Vector2 position = entity.ecsGamePosition.value;
-                    float pickingDistance = entity.ecsGameUnitsPickingDistance.Value;
-                    float rangeViewSqr = pickingDistance * pickingDistance;
-                    GameEntity closestItem = null;
-                    float closestItemSqrDistance = int.MaxValue;
+				IGroup<ItemEntity> group = _itemContext.GetGroup(
+					ItemMatcher.AllOf(ItemMatcher.EcsItemComponentsWeaponeType)
+						.NoneOf(ItemMatcher.EcsCommonComponentsDestroyed));
+				List<ItemEntity> buffer = ItemEntitiesListPool.Spawn();
+				group.GetEntities(buffer);
+				if (buffer.Count == 0)
+					return false;
 
-                    foreach (var item in buffer)
-                    {
-                        if (!item.hasEcsGamePosition)
-                            continue;
+				Vector2 position = entity.ecsGamePosition.value;
+				float pickingDistance = entity.ecsGameUnitsPickingDistance.Value;
+				float rangeViewSqr = pickingDistance * pickingDistance;
+				float closestItemSqrDistance = int.MaxValue;
 
-                        Vector2 itemPosition = item.ecsGamePosition.value;
-                        Vector2 itemDistance = itemPosition - position;
-                        float itemDistanceSqrMagnitude = itemDistance.sqrMagnitude;
-                        if (itemDistanceSqrMagnitude > rangeViewSqr || closestItemSqrDistance < itemDistanceSqrMagnitude)
-                            continue;
-                        entity.isEcsGameFlagsItemEquipped = true;
-                        Debug.Log("ItemEquipped");
-                    }
-                    
-                    return false; 
-                });
-        
-    }
+				foreach (ItemEntity item in buffer)
+				{
+					if (!item.hasEcsItemComponentsPosition)
+						continue;
+
+					Vector2 itemPosition = item.ecsItemComponentsPosition.Value;
+					Vector2 itemDistance = itemPosition - position;
+					float itemDistanceSqrMagnitude = itemDistance.sqrMagnitude;
+					if (itemDistanceSqrMagnitude > rangeViewSqr || closestItemSqrDistance < itemDistanceSqrMagnitude)
+						continue;
+				}
+
+				return false;
+			});
+	}
 }

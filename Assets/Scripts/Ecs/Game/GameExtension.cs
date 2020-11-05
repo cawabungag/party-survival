@@ -10,38 +10,34 @@ namespace Ecs.Game
 	{
 		public static GameEntity CreateUnit(this GameContext context, EObjectType unitType, Vector3 position)
 		{
-			var entity = context.CreateEntity();
+			GameEntity entity = context.CreateEntity();
 			entity.AddEcsCommonComponentsUid(UidGenerator.Next());
 			entity.AddEcsGameObjectType(unitType);
 			entity.AddEcsGamePosition(position);
 			entity.AddEcsGameDesiredDirectional(Vector2.zero);
 			entity.AddEcsGameMovementType(EMovementType.Walk);
 			entity.isEcsGameFlagsInstantiated = true;
-			entity.isEcsGameFlagsUnit = true;
-			return entity;
-		}
-		public static GameEntity CreateEnemy(this GameContext context, EObjectType unitType, Vector3 position)
-		{
-			var entity = context.CreateEntity();
-			entity.AddEcsCommonComponentsUid(UidGenerator.Next());
-			entity.AddEcsGameObjectType(unitType);
-			entity.AddEcsGamePosition(position);
-			entity.AddEcsGameDesiredDirectional(Vector2.zero);
-			entity.AddEcsGameMovementType(EMovementType.Walk);
-			entity.isEcsGameFlagsInstantiated = true;
-			entity.isEnemy = true;
 			return entity;
 		}
 
-		public static GameEntity CreateWeapon(this GameContext context, EWeaponType weaponType, Vector3 position)
+		public static GameEntity CreateEnemy(this GameContext context, EObjectType unitType, Vector3 position)
 		{
-			var entity = context.CreateEntity();
-			entity.AddEcsItemComponentsWeaponType(weaponType);
+			GameEntity entity = context.CreateEntity();
+			entity.AddEcsCommonComponentsUid(UidGenerator.Next());
+			entity.AddEcsGameObjectType(unitType);
 			entity.AddEcsGamePosition(position);
 			entity.AddEcsGameDesiredDirectional(Vector2.zero);
-			entity.isEcsGameFlagsWeaponInstantiated = true;
-			entity.isEcsItemComponentsWeapone = true;
-			entity.isEcsGameFlagsItemEquipped = false;
+			entity.AddEcsGameMovementType(EMovementType.Walk);
+			entity.isEcsGameFlagsInstantiated = true;
+			return entity;
+		}
+
+		public static ItemEntity CreateWeapon(this ItemContext context, EWeaponType weaponType, Vector3 position)
+		{
+			ItemEntity entity = context.CreateEntity();
+			entity.AddEcsItemComponentsWeaponeType(weaponType);
+			entity.AddEcsItemComponentsPosition(position);
+			entity.isEcsGameFlagsInstantiated = true;
 			return entity;
 		}
 	}
