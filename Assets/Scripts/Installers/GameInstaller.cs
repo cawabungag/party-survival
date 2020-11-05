@@ -67,6 +67,7 @@ namespace Installers
 			Container.BindInterfacesTo<GoToTargetActionBuilder>().AsSingle();
 			Container.BindInterfacesTo<AttackActionBuilder>().AsSingle();
 			Container.BindInterfacesTo<ItemDetectionBuilder>().AsSingle();
+			Container.BindInterfacesTo<PickingUpItemBuilder>().AsSingle();
 		}
 	}
 }
