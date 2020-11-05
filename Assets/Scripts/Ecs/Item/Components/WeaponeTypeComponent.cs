@@ -1,14 +1,16 @@
-﻿using DB.Weapons;
+using DB.Weapons;
 using Entitas;
-using Entitas.CodeGeneration.Attributes;
 
 namespace Ecs.Item.Components
 {
-    [Game, Event(true)]
-    public class WeaponTypeComponent : IComponent
-    {
-        public EWeaponType Value;
+	[Item]
+	public class WeaponeTypeComponent : IComponent
+	{
+		public EWeaponType Value;
 
-        public override string ToString() => "WeaponType: " + Value;
-    }
+		public override string ToString()
+		{
+			return $"Weapone type: {Value}";
+		}
+	}
 }

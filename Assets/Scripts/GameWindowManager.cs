@@ -9,28 +9,23 @@ using Zenject;
 public class GameWindowManager : IInitializable
 {
 	private readonly SignalBus _signalBus;
-	private readonly GameContext m_gameContext;
+	private readonly GameContext _gameContext;
+	private readonly ItemContext _itemContext;
 
-	public GameWindowManager(SignalBus signalBus, GameContext gameContext)
+	public GameWindowManager(SignalBus signalBus, GameContext gameContext, ItemContext itemContext)
 	{
 		_signalBus = signalBus;
-		m_gameContext = gameContext;
+		_gameContext = gameContext;
+		_itemContext = itemContext;
 	}
-	
+
 	public void Initialize()
 	{
 		_signalBus.OpenWindow<InputWindow>();
-		m_gameContext.CreateUnit(EObjectType.Unit, Vector3.zero);
-		m_gameContext.CreateUnit(EObjectType.Unit, new Vector3(1.5f, 0, 1.5f));
-		m_gameContext.CreateUnit(EObjectType.Unit, new Vector3(-1.5f, 0, -1.5f));
-		m_gameContext.CreateEnemy(EObjectType.ZombieUnit, Vector3.zero);
-		m_gameContext.CreateWeapon(EWeaponType.AK47, new Vector3(-6,-1,0));
-	/*	m_gameContext.CreateWeapon(EWeaponType.M4A1, new Vector3(-12, -1, 0));
-		m_gameContext.CreateWeapon(EWeaponType.UMP45, new Vector3(-10, -1, 0));
-		m_gameContext.CreateWeapon(EWeaponType.SkorpionVz, new Vector3(-8, -1, 0));
-		m_gameContext.CreateWeapon(EWeaponType.DesertEagle, new Vector3(-6, -1, 0));
-		m_gameContext.CreateWeapon(EWeaponType.Magnim500, new Vector3(-4, -1, 0));
-		m_gameContext.CreateWeapon(EWeaponType.GlockG22,new Vector3(-2, -1, 0));*/
-
+		_gameContext.CreateUnit(EObjectType.Unit, Vector3.zero);
+		_gameContext.CreateUnit(EObjectType.Unit, new Vector3(1.5f, 0, 1.5f));
+		_gameContext.CreateUnit(EObjectType.Unit, new Vector3(-1.5f, 0, -1.5f));
+		_gameContext.CreateEnemy(EObjectType.ZombieUnit, Vector3.zero);
+		_itemContext.CreateWeapon(EWeaponType.AK47, new Vector3(-6, -1, 0));
 	}
 }

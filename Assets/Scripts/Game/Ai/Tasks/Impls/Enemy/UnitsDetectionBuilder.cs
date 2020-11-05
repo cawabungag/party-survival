@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using CleverCrow.Fluid.BTs.Trees;
+using DB.Units;
 using Entitas;
 using UnityEngine;
 using Zenject;
@@ -26,7 +27,7 @@ namespace Game.Ai.Tasks.Impls.Enemy
 				if (!entity.hasEcsGameUnitsRangeView || !entity.hasEcsGamePosition)
 					return false;
 				IGroup<GameEntity> group = _game.GetGroup(
-					GameMatcher.AllOf(GameMatcher.EcsGameFlagsUnit)
+					GameMatcher.AllOf(GameMatcher.EcsGameObjectType)
 						.NoneOf(GameMatcher.EcsGameFlagsDestroyed));
 				List<GameEntity> buffer = GameEntitiesListPool.Spawn();
 				group.GetEntities(buffer);
@@ -39,9 +40,11 @@ namespace Game.Ai.Tasks.Impls.Enemy
 				GameEntity closestUnit = null;
 				float closestFoodSqrDistance = int.MaxValue;
 
-				foreach (var unit in buffer)
+				foreach (GameEntity unit in buffer)
 				{
 					if (!unit.hasEcsGamePosition)
+						continue;
+					if (unit.ecsGameObjectType.Value != EObjectType.ZombieUnit)
 						continue;
 
 					Vector2 unitPosition = unit.ecsGamePosition.value;

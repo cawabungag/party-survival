@@ -9,35 +9,56 @@
 public static class ItemComponentsLookup {
 
     public const int EcsCommonComponentsDestroyed = 0;
-    public const int EcsCommonComponentsOwner = 1;
-    public const int EcsCommonComponentsUid = 2;
-    public const int EcsCoreComponentsUid = 3;
-    public const int EcsGameFlagsItem = 4;
-    public const int EcsItemComponentsAmount = 5;
-    public const int EcsItemComponentsItemType = 6;
-    public const int ItemEcsCommonComponentsDestroyedListener = 7;
+    public const int EcsCommonComponentsLink = 1;
+    public const int EcsCommonComponentsOwner = 2;
+    public const int EcsCommonComponentsUid = 3;
+    public const int EcsCoreComponentsUid = 4;
+    public const int EcsGameFlagsInstantiated = 5;
+    public const int EcsItemComponentsAmount = 6;
+    public const int EcsItemComponentsItemType = 7;
+    public const int EcsItemComponentsPosition = 8;
+    public const int EcsItemComponentsWeaponeType = 9;
+    public const int EcsItemWeaponsDamage = 10;
+    public const int EcsItemWeaponsFiringFrequency = 11;
+    public const int EcsItemWeaponsShells = 12;
+    public const int EcsItemComponentsPositionListener = 13;
+    public const int ItemEcsCommonComponentsDestroyedListener = 14;
 
-    public const int TotalComponents = 8;
+    public const int TotalComponents = 15;
 
     public static readonly string[] componentNames = {
         "EcsCommonComponentsDestroyed",
+        "EcsCommonComponentsLink",
         "EcsCommonComponentsOwner",
         "EcsCommonComponentsUid",
         "EcsCoreComponentsUid",
-        "EcsGameFlagsItem",
+        "EcsGameFlagsInstantiated",
         "EcsItemComponentsAmount",
         "EcsItemComponentsItemType",
+        "EcsItemComponentsPosition",
+        "EcsItemComponentsWeaponeType",
+        "EcsItemWeaponsDamage",
+        "EcsItemWeaponsFiringFrequency",
+        "EcsItemWeaponsShells",
+        "EcsItemComponentsPositionListener",
         "ItemEcsCommonComponentsDestroyedListener"
     };
 
     public static readonly System.Type[] componentTypes = {
         typeof(Ecs.Common.Components.DestroyedComponent),
+        typeof(Ecs.Common.Components.LinkComponent),
         typeof(Ecs.Common.Components.OwnerComponent),
         typeof(Ecs.Common.Components.UidComponent),
         typeof(Ecs.Core.Components.UidComponent),
-        typeof(Ecs.Game.Flags.ItemComponent),
+        typeof(Ecs.Game.Flags.InstantiatedComponent),
         typeof(Ecs.Item.Components.AmountComponent),
         typeof(Ecs.Item.Components.ItemTypeComponent),
+        typeof(Ecs.Item.Components.PositionComponent),
+        typeof(Ecs.Item.Components.WeaponeTypeComponent),
+        typeof(Ecs.Item.Weapons.DamageComponent),
+        typeof(Ecs.Item.Weapons.FiringFrequencyComponent),
+        typeof(Ecs.Item.Weapons.ShellsComponent),
+        typeof(EcsItemComponentsPositionListenerComponent),
         typeof(ItemEcsCommonComponentsDestroyedListenerComponent)
     };
 }

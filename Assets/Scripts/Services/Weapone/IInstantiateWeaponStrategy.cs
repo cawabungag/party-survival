@@ -3,8 +3,8 @@ using Zenject;
 
 namespace Services.Weapone
 {
-    public interface IInstantiateWeaponStrategy : IFactory<GameEntity, ILinkable>
-    {
-        bool CanInstantiate(GameEntity entity);
-    }
+	public interface IInstantiateWeaponStrategy : IFactory<ItemEntity, ILinkable>
+	{
+		bool CanInstantiate(ItemEntity entity);
+	}
 }

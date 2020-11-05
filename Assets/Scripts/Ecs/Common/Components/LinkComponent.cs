@@ -3,7 +3,7 @@ using Entitas;
 
 namespace Ecs.Common.Components
 {
-	[Game]
+	[Game, Item]
 	public class LinkComponent : IComponent
 	{
 		public ILinkable Value;

@@ -1,4 +1,5 @@
 using System;
+using DB.Units;
 using DB.Units.MovementType;
 using Entitas;
 using InstallerGenerator.Attributes;
@@ -22,7 +23,7 @@ namespace Ecs.Game.System
 		)
 		{
 			_gameContext = gameContext;
-			_group = gameContext.GetGroup(GameMatcher.AllOf(GameMatcher.EcsGameFlagsUnit)
+			_group = gameContext.GetGroup(GameMatcher.AllOf(GameMatcher.EcsGameObjectType)
 				.NoneOf(GameMatcher.EcsGameFlagsDestroyed));
 		}
 
@@ -31,11 +32,11 @@ namespace Ecs.Game.System
 			var buffer = GameEntitiesListPool.Spawn();
 			_group.GetEntities(buffer);
 
-			for (var i = 0; i < buffer.Count; i++)
+			for (int i = 0; i < buffer.Count; i++)
 			{
 				GameEntity entity = buffer[i];
 				if (!entity.hasEcsGamePosition || !entity.hasEcsGameDesiredDirectional ||
-				    !entity.hasEcsGameUnitsSpeed || !_gameContext.hasEcsGameInputDirectional)
+				    !entity.hasEcsGameUnitsSpeed || !_gameContext.hasEcsGameInputDirectional || entity.ecsGameObjectType.Value != EObjectType.Unit)
 					continue;
 				Vector2 desiredDirection = _gameContext.ecsGameInputDirectional.Value;
 				entity.ReplaceEcsGameDesiredDirectional(desiredDirection);

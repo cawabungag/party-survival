@@ -9,9 +9,9 @@ namespace DB.Weapons.Prefabs.Impls
 	{
 		public EWeaponType _weaponName;
 
-		[SerializeField] private GameObjectView _prefab;
+		[SerializeField] private ItemObjectView _prefab;
 
 		public EWeaponType WeaponId => _weaponName;
-		public GameObjectView Prefab => _prefab;
+		public ItemObjectView Prefab => _prefab;
 	}
 }

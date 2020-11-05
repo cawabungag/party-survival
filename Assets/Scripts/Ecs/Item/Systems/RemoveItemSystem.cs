@@ -20,7 +20,7 @@ namespace Ecs.Item.Systems
 
 		protected override void Execute(List<ItemEntity> entities)
 		{
-			foreach (var entity in entities)
+			foreach (ItemEntity entity in entities)
 			{
 				if (entity.ecsItemComponentsAmount.Value > 0)
 					continue;

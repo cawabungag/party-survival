@@ -1,9 +1,9 @@
 using Ecs.Core.Impls;
-using Ecs.Game.Camera;
 using Game.Ai.Impls;
 using Game.Ai.Tasks.Impls;
 using Game.Ai.Tasks.Impls.Enemy;
 using Game.Ai.Tasks.Impls.PlayerUnit;
+using Game.Camera;
 using Services.Items.Impls;
 using Services.Unit.Impls;
 using Services.Unit.Impls.Strategies;
@@ -59,7 +59,7 @@ namespace Installers
 		private void BindFactories()
 		{
 			Container.BindInterfacesTo<UnitFactory>().AsSingle();
-			Container.BindInterfacesTo<WeaponFactory>().AsSingle();
+			Container.BindInterfacesTo<ItemFactory>().AsSingle();
 
 			//Ai task builder
 			Container.BindInterfacesTo<WanderActionBuilder>().AsSingle();
