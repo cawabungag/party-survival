@@ -1,5 +1,7 @@
 ﻿using CleverCrow.Fluid.BTs.Tasks;
 using CleverCrow.Fluid.BTs.Trees;
+using Ecs.Core;
+using UnityEngine;
 
 namespace Game.Ai.Tasks.Impls.PlayerUnit
 {
@@ -15,6 +17,21 @@ namespace Game.Ai.Tasks.Impls.PlayerUnit
 		public override string Name => TaskNames.PICK_UP_ITEM;
 
 		public override void Fill(BehaviorTreeBuilder builder, GameEntity entity)
-			=> builder.Do(Name, () => TaskStatus.Success);
+			=> builder.Do(Name, () =>
+			{
+				if (!entity.hasEcsGamePosition)
+					return TaskStatus.Failure; Debug.Log("Fail");
+				
+
+				Uid itemUid = entity.ecsItemComponentsPickingItem.Value;
+				ItemEntity itemEntity = _item.GetEntityWithEcsCommonComponentsUid(itemUid);
+				
+				itemEntity.Destroy();
+				Debug.Log("ItemDestroy/Equipped");
+
+
+
+				    return TaskStatus.Success;
+			});
 	}
 }
