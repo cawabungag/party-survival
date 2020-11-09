@@ -1,9 +1,10 @@
 using DB.Units.MovementType;
+using DB.Weapons;
 using UnityEngine;
 
 namespace Ecs.View.Impls.Game
 {
-	public class UnitObjectView : GameObjectView, IEcsGameMovementTypeListener, IEcsGameVelocityListener
+	public class UnitObjectView : GameObjectView, IEcsGameMovementTypeListener, IEcsGameVelocityListener, IEcsItemComponentsWeaponEquippedListener
 	{
 		[SerializeField] private Animator _animator;
 
@@ -11,6 +12,7 @@ namespace Ecs.View.Impls.Game
 		{
 			entity.AddEcsGameMovementTypeListener(this);
 			entity.AddEcsGameVelocityListener(this);
+			entity.AddEcsItemComponentsWeaponEquippedListener(this);
 			base.Listen(entity);
 		}
 
@@ -25,6 +27,11 @@ namespace Ecs.View.Impls.Game
 			Vector3 currentPos = transform.position;
 			Vector3 facePos = currentPos + newPos;
 			transform.LookAt(facePos);
+		}
+
+		public void OnEcsItemComponentsWeaponEquipped(GameEntity entity, EWeaponType Value)
+		{
+			Debug.Log("sdfsda");
 		}
 	}
 }
