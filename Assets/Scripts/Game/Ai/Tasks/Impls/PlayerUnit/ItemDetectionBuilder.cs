@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using CleverCrow.Fluid.BTs.Trees;
+using Ecs.Core;
 using Entitas;
 using UnityEngine;
 using Zenject;
@@ -49,6 +50,8 @@ namespace Game.Ai.Tasks.Impls.PlayerUnit
 					float itemDistanceSqrMagnitude = itemDistance.sqrMagnitude;
 					if (itemDistanceSqrMagnitude > rangeViewSqr || closestItemSqrDistance < itemDistanceSqrMagnitude)
 						continue;
+
+					entity.ReplaceEcsItemComponentsPickingItem(UidGenerator.Next());
 				}
 
 				return false;

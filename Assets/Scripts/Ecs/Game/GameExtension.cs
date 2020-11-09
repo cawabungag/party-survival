@@ -2,6 +2,7 @@ using DB.Units;
 using DB.Units.MovementType;
 using DB.Weapons;
 using Ecs.Core;
+using Services.Items;
 using UnityEngine;
 
 namespace Ecs.Game
@@ -35,6 +36,7 @@ namespace Ecs.Game
 		public static ItemEntity CreateWeapon(this ItemContext context, EWeaponType weaponType, Vector3 position)
 		{
 			ItemEntity entity = context.CreateEntity();
+			entity.AddEcsCommonComponentsUid(Uid.Empty);
 			entity.AddEcsItemComponentsWeaponeType(weaponType);
 			entity.AddEcsItemComponentsPosition(position);
 			entity.isEcsGameFlagsInstantiated = true;

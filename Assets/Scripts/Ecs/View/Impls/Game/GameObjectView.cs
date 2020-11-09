@@ -1,3 +1,4 @@
+using DB.Weapons;
 using UnityEngine;
 
 namespace Ecs.View.Impls.Game
@@ -23,5 +24,6 @@ namespace Ecs.View.Impls.Game
 
 		public void OnEcsGamePosition(GameEntity entity, Vector2 value) =>
 			transform.position = new Vector3(value.x, 0, value.y);
+		
 	}
 }

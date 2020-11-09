@@ -14,23 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _weaponPrefabVos:
   - _weaponName: 0
-    _prefab: {fileID: -4328524508030676508, guid: 313c05f4b3811f84fa14570d2e5b11d7,
+    _prefab: {fileID: -9154079624523607718, guid: 313c05f4b3811f84fa14570d2e5b11d7,
       type: 3}
   - _weaponName: 1
-    _prefab: {fileID: 8354910623896500682, guid: b80509916e8f4134ca1d34347a503303,
-      type: 3}
+    _prefab: {fileID: 0}
   - _weaponName: 3
-    _prefab: {fileID: -889820787984431066, guid: 4421ab8063cd27c41b3efc064d3c21c4,
-      type: 3}
+    _prefab: {fileID: 0}
   - _weaponName: 2
-    _prefab: {fileID: -4330070817329929357, guid: 8fed62e869191ac40b24e502e26afae4,
-      type: 3}
+    _prefab: {fileID: 0}
   - _weaponName: 4
-    _prefab: {fileID: 117161765495947440, guid: c7932ed0194a948d79f4f954367eb791,
-      type: 3}
+    _prefab: {fileID: 0}
   - _weaponName: 5
-    _prefab: {fileID: -2287343771781390259, guid: fb303ab34b5c043d2ae5a0890e8404dd,
-      type: 3}
+    _prefab: {fileID: 0}
   - _weaponName: 6
-    _prefab: {fileID: -6411421317473885602, guid: 0f7a1914bf59147d182eb09da9ab224b,
-      type: 3}
+    _prefab: {fileID: 0}
