@@ -16,10 +16,12 @@ MonoBehaviour:
   - _unitId: 0
     _health: 100
     _speed: 10
-    _rangeView: 30
+    _rangeView: 5
     _pickingDistance: 3
+    _turningSpeed: 0
   - _unitId: 2
     _health: 100
     _speed: 10
     _rangeView: 30
     _pickingDistance: 0
+    _turningSpeed: 0

@@ -34,21 +34,22 @@ public static class GameComponentsLookup {
     public const int EcsGameUnitsRangeView = 23;
     public const int EcsGameUnitsSpeed = 24;
     public const int EcsGameUnitsTransform = 25;
-    public const int EcsGameVelocity = 26;
-    public const int EcsItemComponentsPickingItem = 27;
-    public const int EcsItemComponentsWeaponEquipped = 28;
-    public const int EcsItemWeaponsDamage = 29;
-    public const int EcsCommonComponentsNameListener = 30;
-    public const int EcsGameDesiredDirectionalListener = 31;
-    public const int EcsGameMovementTypeListener = 32;
-    public const int EcsGameObjectTypeListener = 33;
-    public const int EcsGamePositionListener = 34;
-    public const int EcsGameUnitsPickingDistanceListener = 35;
-    public const int EcsGameVelocityListener = 36;
-    public const int EcsItemComponentsWeaponEquippedListener = 37;
-    public const int GameEcsCommonComponentsDestroyedListener = 38;
+    public const int EcsGameUnitsTurningSpeed = 26;
+    public const int EcsGameVelocity = 27;
+    public const int EcsItemComponentsPickingItem = 28;
+    public const int EcsItemComponentsWeaponEquipped = 29;
+    public const int EcsItemWeaponsDamage = 30;
+    public const int EcsCommonComponentsNameListener = 31;
+    public const int EcsGameDesiredDirectionalListener = 32;
+    public const int EcsGameMovementTypeListener = 33;
+    public const int EcsGameObjectTypeListener = 34;
+    public const int EcsGamePositionListener = 35;
+    public const int EcsGameUnitsPickingDistanceListener = 36;
+    public const int EcsGameVelocityListener = 37;
+    public const int EcsItemComponentsWeaponEquippedListener = 38;
+    public const int GameEcsCommonComponentsDestroyedListener = 39;
 
-    public const int TotalComponents = 39;
+    public const int TotalComponents = 40;
 
     public static readonly string[] componentNames = {
         "EcsAiBehaviourTree",
@@ -77,6 +78,7 @@ public static class GameComponentsLookup {
         "EcsGameUnitsRangeView",
         "EcsGameUnitsSpeed",
         "EcsGameUnitsTransform",
+        "EcsGameUnitsTurningSpeed",
         "EcsGameVelocity",
         "EcsItemComponentsPickingItem",
         "EcsItemComponentsWeaponEquipped",
@@ -119,6 +121,7 @@ public static class GameComponentsLookup {
         typeof(Ecs.Game.Units.RangeViewComponent),
         typeof(Ecs.Game.Units.SpeedComponent),
         typeof(Ecs.Game.Units.TransformComponent),
+        typeof(Ecs.Game.Units.TurningSpeedComponent),
         typeof(Ecs.Game.VelocityComponent),
         typeof(Ecs.Item.Components.PickingItemComponent),
         typeof(Ecs.Item.Components.WeaponEquippedComponent),

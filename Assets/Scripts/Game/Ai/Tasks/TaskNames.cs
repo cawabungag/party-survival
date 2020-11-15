@@ -8,5 +8,8 @@ namespace Game.Ai.Tasks
 		public const string ATTACK = "attack";
 		public const string FIND_ITEM = "find_item";
 		public const string PICK_UP_ITEM = "pick_up_item";
+		public const string FIND_ENEMY = "find_enemy";
+		public const string AIMING_ENEMY = "aiming_enemy";
+		public const string ATTACK_ENEMY = "attack_enemy";
 	}
 }

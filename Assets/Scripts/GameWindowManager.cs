@@ -20,12 +20,12 @@ public class GameWindowManager : IInitializable
 	}
 
 	public void Initialize()
-	{
+	{ 
 		_signalBus.OpenWindow<InputWindow>();
 		_gameContext.CreateUnit(EObjectType.Unit, Vector3.zero);
 		_gameContext.CreateUnit(EObjectType.Unit, new Vector3(1.5f, 0, 1.5f));
 		_gameContext.CreateUnit(EObjectType.Unit, new Vector3(-1.5f, 0, -1.5f));
-		_gameContext.CreateEnemy(EObjectType.ZombieUnit, Vector3.zero);
+		_gameContext.CreateEnemy(EObjectType.ZombieUnit, new Vector3(0, 10,0));
 		_itemContext.CreateWeapon(EWeaponType.AK47, new Vector3(-6, -1, 0));
 	}
 }

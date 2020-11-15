@@ -1,6 +1,7 @@
 using CleverCrow.Fluid.BTs.Tasks;
 using CleverCrow.Fluid.BTs.Trees;
 using Ecs.Core;
+using UnityEngine;
 
 namespace Game.Ai.Tasks.Impls
 {
@@ -30,6 +31,7 @@ namespace Game.Ai.Tasks.Impls
 				float targetEntityHealth = targetEntity.ecsGameUnitsHealth.Value;
 				float newTargetEntityHealth = targetEntityHealth - damage;
 				targetEntity.ReplaceEcsGameUnitsHealth((int) newTargetEntityHealth);
+				Debug.Log("Enemy Health" + newTargetEntityHealth);
 				return TaskStatus.Success;
 			});
 	}

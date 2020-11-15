@@ -25,7 +25,7 @@ namespace Ecs.Game.System
 			{
 				if (entity.ecsGameUnitsHealth.Value <= 0)
 				{
-					entity.Destroy();
+					entity.isEcsCommonComponentsDestroyed = true;
 				}
 			}
 		}

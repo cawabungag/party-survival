@@ -26,6 +26,7 @@ namespace Game.Ai.Tasks.Impls.Enemy
 			{
 				if (!entity.hasEcsGameUnitsRangeView || !entity.hasEcsGamePosition)
 					return false;
+				
 				IGroup<GameEntity> group = _game.GetGroup(
 					GameMatcher.AllOf(GameMatcher.EcsGameObjectType)
 						.NoneOf(GameMatcher.EcsGameFlagsDestroyed));
@@ -44,17 +45,21 @@ namespace Game.Ai.Tasks.Impls.Enemy
 				{
 					if (!unit.hasEcsGamePosition)
 						continue;
-					if (unit.ecsGameObjectType.Value != EObjectType.ZombieUnit)
+					if (unit.ecsGameObjectType.Value != EObjectType.Unit)
 						continue;
 
-					Vector2 unitPosition = unit.ecsGamePosition.value;
-					Vector2 unitDistance = unitPosition - position;
-					float unitDistanceSqrMagnitude = unitDistance.sqrMagnitude;
-					if (unitDistanceSqrMagnitude > rangeViewSqr || closestFoodSqrDistance < unitDistanceSqrMagnitude)
-						continue;
+					if (unit.ecsGameObjectType.Value != EObjectType.Unit)
+					{
+						Vector2 unitPosition = unit.ecsGamePosition.value;
+						Vector2 unitDistance = unitPosition - position;
+						float unitDistanceSqrMagnitude = unitDistance.sqrMagnitude;
+						if (unitDistanceSqrMagnitude > rangeViewSqr ||
+						    closestFoodSqrDistance < unitDistanceSqrMagnitude)
+							continue;
 
-					closestFoodSqrDistance = unitDistanceSqrMagnitude;
-					closestUnit = unit;
+						closestFoodSqrDistance = unitDistanceSqrMagnitude;
+						closestUnit = unit;
+					}
 				}
 
 				if (closestUnit != null)

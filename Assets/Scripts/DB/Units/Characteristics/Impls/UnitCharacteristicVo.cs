@@ -10,6 +10,7 @@ namespace DB.Units.Characteristics.Impls
 		public float _speed;
 		public float _rangeView;
 		public float _pickingDistance;
+		public float _turningSpeed;
 		
 
 		public float Health => _health;
@@ -17,5 +18,7 @@ namespace DB.Units.Characteristics.Impls
 		public float RangeView => _rangeView;
 		public EObjectType UnitId => _unitId;
 		public float PickingDistance => _pickingDistance;
+
+		public float TurningSpeed => _turningSpeed;
 	}
 }
