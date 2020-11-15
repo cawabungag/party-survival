@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using CleverCrow.Fluid.BTs.Trees;
-using Ecs.Core;
+using DB.Units;
+using DB.Weapons;
 using Entitas;
 using UnityEngine;
 using Zenject;
@@ -51,7 +52,17 @@ namespace Game.Ai.Tasks.Impls.PlayerUnit
 					if (itemDistanceSqrMagnitude > rangeViewSqr || closestItemSqrDistance < itemDistanceSqrMagnitude)
 						continue;
 
-					entity.ReplaceEcsItemComponentsPickingItem(UidGenerator.Next());
+					EWeaponType weaponType = item.ecsItemComponentsWeaponeType.Value;
+					item.isEcsCommonComponentsDestroyed = true;
+
+					if (!entity.hasEcsItemComponentsWeaponEquipped)
+					{
+						entity.AddEcsItemComponentsWeaponEquipped(weaponType);
+					}
+					else
+					{
+						entity.ReplaceEcsItemComponentsWeaponEquipped(weaponType);
+					}
 				}
 
 				return false;
