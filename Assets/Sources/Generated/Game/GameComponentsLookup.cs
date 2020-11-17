@@ -44,12 +44,13 @@ public static class GameComponentsLookup {
     public const int EcsGameMovementTypeListener = 33;
     public const int EcsGameObjectTypeListener = 34;
     public const int EcsGamePositionListener = 35;
-    public const int EcsGameUnitsPickingDistanceListener = 36;
-    public const int EcsGameVelocityListener = 37;
-    public const int EcsItemComponentsWeaponEquippedListener = 38;
-    public const int GameEcsCommonComponentsDestroyedListener = 39;
+    public const int EcsGameUnitsHealthListener = 36;
+    public const int EcsGameUnitsPickingDistanceListener = 37;
+    public const int EcsGameVelocityListener = 38;
+    public const int EcsItemComponentsWeaponEquippedListener = 39;
+    public const int GameEcsCommonComponentsDestroyedListener = 40;
 
-    public const int TotalComponents = 40;
+    public const int TotalComponents = 41;
 
     public static readonly string[] componentNames = {
         "EcsAiBehaviourTree",
@@ -88,6 +89,7 @@ public static class GameComponentsLookup {
         "EcsGameMovementTypeListener",
         "EcsGameObjectTypeListener",
         "EcsGamePositionListener",
+        "EcsGameUnitsHealthListener",
         "EcsGameUnitsPickingDistanceListener",
         "EcsGameVelocityListener",
         "EcsItemComponentsWeaponEquippedListener",
@@ -131,6 +133,7 @@ public static class GameComponentsLookup {
         typeof(EcsGameMovementTypeListenerComponent),
         typeof(EcsGameObjectTypeListenerComponent),
         typeof(EcsGamePositionListenerComponent),
+        typeof(EcsGameUnitsHealthListenerComponent),
         typeof(EcsGameUnitsPickingDistanceListenerComponent),
         typeof(EcsGameVelocityListenerComponent),
         typeof(EcsItemComponentsWeaponEquippedListenerComponent),

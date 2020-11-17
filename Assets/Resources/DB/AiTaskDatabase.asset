@@ -21,5 +21,4 @@ MonoBehaviour:
     - attack
   - objectType: 0
     taskNames:
-    - test_trigger
-    - attack_enemy
+    - find_item
