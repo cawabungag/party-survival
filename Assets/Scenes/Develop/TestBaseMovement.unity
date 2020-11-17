@@ -264,7 +264,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ed5fcbfedf8d71b4ea2c0355f3872ce5, type: 2}
+  - {fileID: 2100000, guid: 6d4a7d346e588e24ca828f37d096b0b3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -358,7 +358,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ed5fcbfedf8d71b4ea2c0355f3872ce5, type: 2}
+  - {fileID: 2100000, guid: 6d4a7d346e588e24ca828f37d096b0b3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -452,7 +452,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ed5fcbfedf8d71b4ea2c0355f3872ce5, type: 2}
+  - {fileID: 2100000, guid: 6d4a7d346e588e24ca828f37d096b0b3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -546,7 +546,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ed5fcbfedf8d71b4ea2c0355f3872ce5, type: 2}
+  - {fileID: 2100000, guid: 6d4a7d346e588e24ca828f37d096b0b3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -688,7 +688,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ed5fcbfedf8d71b4ea2c0355f3872ce5, type: 2}
+  - {fileID: 2100000, guid: 6d4a7d346e588e24ca828f37d096b0b3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -782,7 +782,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ed5fcbfedf8d71b4ea2c0355f3872ce5, type: 2}
+  - {fileID: 2100000, guid: 6d4a7d346e588e24ca828f37d096b0b3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -974,6 +974,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6148947338297041228, guid: 686336009806940faadc59f37678f4bb,
         type: 3}
+      propertyPath: _scriptableObjectInstallers.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6148947338297041228, guid: 686336009806940faadc59f37678f4bb,
+        type: 3}
       propertyPath: _parentNewObjectsUnderSceneContext
       value: 0
       objectReference: {fileID: 0}
@@ -986,6 +991,11 @@ PrefabInstance:
         type: 3}
       propertyPath: _autoRun
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6148947338297041228, guid: 686336009806940faadc59f37678f4bb,
+        type: 3}
+      propertyPath: _scriptableObjectInstallers.Array.data[2]
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6148947338297041229, guid: 686336009806940faadc59f37678f4bb,
         type: 3}

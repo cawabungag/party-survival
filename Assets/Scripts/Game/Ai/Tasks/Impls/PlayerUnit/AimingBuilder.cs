@@ -1,5 +1,4 @@
-﻿using Boo.Lang;
-using CleverCrow.Fluid.BTs.Tasks;
+﻿using CleverCrow.Fluid.BTs.Tasks;
 using CleverCrow.Fluid.BTs.Trees;
 using DB.Units;
 using Entitas;
@@ -31,8 +30,8 @@ namespace Game.Ai.Tasks.Impls.PlayerUnit
                 Vector3 newVector3 = new Vector3(targetPosition.x,0,targetPosition.y);
                 var directional = targetPosition - position;
                 var lookRotation = Quaternion.LookRotation(newVector3);
-                var rotation = Quaternion.Lerp(, lookRotation, turningSpeed)
-                    .eulerAngles;
+              //  var rotation = Quaternion.Lerp(, lookRotation, turningSpeed)
+                //    .eulerAngles;
              //  position.rotation = Quaternion.Euler(rotation.x, rotation.y, 0f);
                     
                 return TaskStatus.Success;

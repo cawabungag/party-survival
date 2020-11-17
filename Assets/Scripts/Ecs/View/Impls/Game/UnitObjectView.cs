@@ -4,15 +4,16 @@ using UnityEngine;
 
 namespace Ecs.View.Impls.Game
 {
-	public class UnitObjectView : GameObjectView, IEcsGameMovementTypeListener, IEcsGameVelocityListener, IEcsItemComponentsWeaponEquippedListener
+	public class UnitObjectView : GameObjectView, IEcsGameMovementTypeListener, IEcsGameVelocityListener, IEcsItemComponentsWeaponEquippedListener, IEcsGameUnitsHealthListener
 	{
 		[SerializeField] private Animator _animator;
-
+		[SerializeField] private HealthBar _healthBar;
 		protected override void Listen(GameEntity entity)
 		{
 			entity.AddEcsGameMovementTypeListener(this);
 			entity.AddEcsGameVelocityListener(this);
 			entity.AddEcsItemComponentsWeaponEquippedListener(this);
+			entity.AddEcsGameUnitsHealthListener(this);
 			base.Listen(entity);
 		}
 
@@ -28,10 +29,15 @@ namespace Ecs.View.Impls.Game
 			Vector3 facePos = currentPos + newPos;
 			transform.LookAt(facePos);
 		}
-
+		
 		public void OnEcsItemComponentsWeaponEquipped(GameEntity entity, EWeaponType Value)
 		{
-			Debug.Log("sdfsda");
+			Debug.Log("Weapon Equipped");
+		}
+		
+		public void OnEcsGameUnitsHealth(GameEntity entity, float Value)
+		{
+			_healthBar.SetHealth(entity.ecsGameUnitsHealth.Value);
 		}
 	}
 }
