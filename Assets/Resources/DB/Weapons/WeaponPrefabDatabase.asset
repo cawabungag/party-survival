@@ -17,14 +17,20 @@ MonoBehaviour:
     _prefab: {fileID: -9154079624523607718, guid: 313c05f4b3811f84fa14570d2e5b11d7,
       type: 3}
   - _weaponName: 1
-    _prefab: {fileID: 0}
+    _prefab: {fileID: -1561573807323737573, guid: b80509916e8f4134ca1d34347a503303,
+      type: 3}
   - _weaponName: 3
-    _prefab: {fileID: 0}
+    _prefab: {fileID: 4243866211144031554, guid: 4421ab8063cd27c41b3efc064d3c21c4,
+      type: 3}
   - _weaponName: 2
-    _prefab: {fileID: 0}
+    _prefab: {fileID: -6264201154750645940, guid: 8fed62e869191ac40b24e502e26afae4,
+      type: 3}
   - _weaponName: 4
-    _prefab: {fileID: 0}
+    _prefab: {fileID: 5360565036360483259, guid: c7932ed0194a948d79f4f954367eb791,
+      type: 3}
   - _weaponName: 5
-    _prefab: {fileID: 0}
+    _prefab: {fileID: 3631736163755808943, guid: fb303ab34b5c043d2ae5a0890e8404dd,
+      type: 3}
   - _weaponName: 6
-    _prefab: {fileID: 0}
+    _prefab: {fileID: -997350669571482391, guid: 0f7a1914bf59147d182eb09da9ab224b,
+      type: 3}

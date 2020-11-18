@@ -1,4 +1,3 @@
-using DB.Weapons;
 using UnityEngine;
 
 namespace Ecs.View.Impls.Game
