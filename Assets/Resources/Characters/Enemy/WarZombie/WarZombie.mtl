@@ -1,0 +1,86 @@
+# Exported from Fuse 1.3.0
+
+newmtl Hat
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.00 1.00 1.00
+map_Kd WarZombie_Hat_diffuse.png
+map_Ks WarZombie_Hat_specular.png
+bump WarZombie_Hat_normal.png
+map_Ns WarZombie_Hat_gloss.png
+
+newmtl Body
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.00 1.00 1.00
+map_Kd WarZombie_Body_diffuse.png
+map_Ks WarZombie_Body_specular.png
+bump WarZombie_Body_normal.png
+map_Ns WarZombie_Body_gloss.png
+
+newmtl Glove
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.00 1.00 1.00
+map_Kd WarZombie_Glove_diffuse.png
+map_Ks WarZombie_Glove_specular.png
+bump WarZombie_Glove_normal.png
+map_Ns WarZombie_Glove_gloss.png
+
+newmtl Bottom
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.00 1.00 1.00
+map_Kd WarZombie_Bottom_diffuse.png
+map_Ks WarZombie_Bottom_specular.png
+bump WarZombie_Bottom_normal.png
+map_Ns WarZombie_Bottom_gloss.png
+
+newmtl Shoes
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.00 1.00 1.00
+map_Kd WarZombie_Shoes_diffuse.png
+map_Ks WarZombie_Shoes_specular.png
+bump WarZombie_Shoes_normal.png
+map_Ns WarZombie_Shoes_gloss.png
+
+newmtl Top
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.00 1.00 1.00
+map_Kd WarZombie_Top_diffuse.png
+map_Ks WarZombie_Top_specular.png
+bump WarZombie_Top_normal.png
+map_Ns WarZombie_Top_gloss.png
+
+newmtl Hair
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.00 1.00 1.00
+map_Kd WarZombie_Hair_diffuse.png
+map_Ks WarZombie_Hair_specular.png
+bump WarZombie_Hair_normal.png
+map_Ns WarZombie_Hair_gloss.png
+

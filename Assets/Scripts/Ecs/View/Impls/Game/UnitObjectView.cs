@@ -8,6 +8,7 @@ namespace Ecs.View.Impls.Game
 	{
 		[SerializeField] private Animator _animator;
 		[SerializeField] private HealthBar _healthBar;
+		[SerializeField] private AudioSource _footSteep;
 		protected override void Listen(GameEntity entity)
 		{
 			entity.AddEcsGameMovementTypeListener(this);
