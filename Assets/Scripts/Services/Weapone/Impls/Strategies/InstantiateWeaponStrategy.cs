@@ -2,6 +2,7 @@
 using DB.Weapons.Characteristics;
 using DB.Weapons.Characteristics.Impls;
 using DB.Weapons.Prefabs;
+using Ecs.Core;
 using Ecs.View;
 using Zenject;
 
